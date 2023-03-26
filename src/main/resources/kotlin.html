@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://kotlinlang.org/ -->
+<html lang="en" class="page__index-new page_restyled_v2 ua_chrome"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Kotlin Programming Language</title>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script gtm="GTM-5P98" type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/optimize.js"></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/munchkin.js"></script><script type="text/javascript" id="www-widgetapi-script" src="../../../../../Kotlin%20Programming%20Language_files/www-widgetapi.js" async=""></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/linkid.js"></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/js"></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/iframe_api"></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/analytics.js"></script><script src="../../../../../Kotlin%20Programming%20Language_files/614099138684330" async=""></script><script src="../../../../../Kotlin%20Programming%20Language_files/357569036421264" async=""></script><script src="../../../../../Kotlin%20Programming%20Language_files/identity.js" async=""></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/fbevents.js"></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/insight.min.js"></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/uwt.js"></script><script async="" src="../../../../../Kotlin%20Programming%20Language_files/gtm.js"></script><script>(function(w, d, s, l, i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5P98');</script>
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com/">
+<link rel="dns-prefetch" href="https://resources.jetbrains.com/">
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<link rel="icon" type="image/svg+xml" href="https://kotlinlang.org/assets/images/favicon.svg?&amp;v=8607ff59d5296c7642ecd72bd3daa79b">
+<link rel="alternate icon" href="https://kotlinlang.org/assets/images/favicon.ico?&amp;v=551939ffa02d7c28c0be13a9d2b33a74">
+<link rel="apple-touch-icon" href="https://kotlinlang.org/assets/images/apple-touch-icon.png?&amp;v=65eea4012614e3c0f62e5f5689d7eee8">
+<link rel="apple-touch-icon" sizes="72x72" href="https://kotlinlang.org/assets/images/apple-touch-icon-72x72.png?&amp;v=3500d5728534ae35584b6b53bff33aab">
+<link rel="apple-touch-icon" sizes="114x114" href="https://kotlinlang.org/assets/images/apple-touch-icon-114x114.png?&amp;v=76cfa8bcf5814916963457a0850d1e26">
+<link rel="apple-touch-icon" sizes="144x144" href="https://kotlinlang.org/assets/images/apple-touch-icon-144x144.png?&amp;v=73ddf35e504822ad0deb51e244d8fc9d">
+
+<meta property="og:title" content="Kotlin Programming Language">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kotlinlang.org/">
+
+<meta property="og:image" content="https://kotlinlang.org/assets/images/open-graph/general.png">
+
+<meta property="og:description" content="">
+<meta property="og:site_name" content="Kotlin">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@kotlin">
+<meta name="twitter:title" content="Kotlin Programming Language">
+<meta name="twitter:description" content="">
+<meta name="twitter:image:src" content="https://kotlinlang.org/assets/images/twitter/general.png">
+
+
+<link rel="stylesheet" href="../../../../../Kotlin%20Programming%20Language_files/styles-v2.css">
+    <link rel="stylesheet" href="../../../../../Kotlin%20Programming%20Language_files/index.css">
+    <link rel="stylesheet" href="../../../../../Kotlin%20Programming%20Language_files/shared.css">
+    <link rel="stylesheet" href="../../../../../Kotlin%20Programming%20Language_files/common.css">
+<style type="text/css">.k2js-iframe{display:none}iframe{border:none;background:white;width:100%;z-index:10}
+</style><style type="text/css">/* BASICS */
+
+.CodeMirror {
+  /* Set height, width, borders, and global font properties here */
+  font-family: monospace;
+  height: 300px;
+  color: black;
+  direction: ltr;
+}
+
+/* PADDING */
+
+.CodeMirror-lines {
+  padding: 4px 0; /* Vertical padding around content */
+}
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+  padding: 0 4px; /* Horizontal padding of content */
+}
+
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  background-color: white; /* The little square between H and V scrollbars */
+}
+
+/* GUTTER */
+
+.CodeMirror-gutters {
+  border-right: 1px solid #ddd;
+  background-color: #f7f7f7;
+  white-space: nowrap;
+}
+.CodeMirror-linenumbers {}
+.CodeMirror-linenumber {
+  padding: 0 3px 0 5px;
+  min-width: 20px;
+  text-align: right;
+  color: #999;
+  white-space: nowrap;
+}
+
+.CodeMirror-guttermarker { color: black; }
+.CodeMirror-guttermarker-subtle { color: #999; }
+
+/* CURSOR */
+
+.CodeMirror-cursor {
+  border-left: 1px solid black;
+  border-right: none;
+  width: 0;
+}
+/* Shown when moving in bi-directional text */
+.CodeMirror div.CodeMirror-secondarycursor {
+  border-left: 1px solid silver;
+}
+.cm-fat-cursor .CodeMirror-cursor {
+  width: auto;
+  border: 0 !important;
+  background: #7e7;
+}
+.cm-fat-cursor div.CodeMirror-cursors {
+  z-index: 1;
+}
+.cm-fat-cursor-mark {
+  background-color: rgba(20, 255, 20, 0.5);
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+}
+.cm-animate-fat-cursor {
+  width: auto;
+  border: 0;
+  -webkit-animation: blink 1.06s steps(1) infinite;
+  -moz-animation: blink 1.06s steps(1) infinite;
+  animation: blink 1.06s steps(1) infinite;
+  background-color: #7e7;
+}
+@-moz-keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+@-webkit-keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+@keyframes blink {
+  0% {}
+  50% { background-color: transparent; }
+  100% {}
+}
+
+/* Can style cursor different in overwrite (non-insert) mode */
+.CodeMirror-overwrite .CodeMirror-cursor {}
+
+.cm-tab { display: inline-block; text-decoration: inherit; }
+
+.CodeMirror-rulers {
+  position: absolute;
+  left: 0; right: 0; top: -50px; bottom: 0;
+  overflow: hidden;
+}
+.CodeMirror-ruler {
+  border-left: 1px solid #ccc;
+  top: 0; bottom: 0;
+  position: absolute;
+}
+
+/* DEFAULT THEME */
+
+.cm-s-default .cm-header {color: blue;}
+.cm-s-default .cm-quote {color: #090;}
+.cm-negative {color: #d44;}
+.cm-positive {color: #292;}
+.cm-header, .cm-strong {font-weight: bold;}
+.cm-em {font-style: italic;}
+.cm-link {text-decoration: underline;}
+.cm-strikethrough {text-decoration: line-through;}
+
+.cm-s-default .cm-keyword {color: #708;}
+.cm-s-default .cm-atom {color: #219;}
+.cm-s-default .cm-number {color: #164;}
+.cm-s-default .cm-def {color: #00f;}
+.cm-s-default .cm-variable,
+.cm-s-default .cm-punctuation,
+.cm-s-default .cm-property,
+.cm-s-default .cm-operator {}
+.cm-s-default .cm-variable-2 {color: #05a;}
+.cm-s-default .cm-variable-3, .cm-s-default .cm-type {color: #085;}
+.cm-s-default .cm-comment {color: #a50;}
+.cm-s-default .cm-string {color: #a11;}
+.cm-s-default .cm-string-2 {color: #f50;}
+.cm-s-default .cm-meta {color: #555;}
+.cm-s-default .cm-qualifier {color: #555;}
+.cm-s-default .cm-builtin {color: #30a;}
+.cm-s-default .cm-bracket {color: #997;}
+.cm-s-default .cm-tag {color: #170;}
+.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-hr {color: #999;}
+.cm-s-default .cm-link {color: #00c;}
+
+.cm-s-default .cm-error {color: #f00;}
+.cm-invalidchar {color: #f00;}
+
+.CodeMirror-composing { border-bottom: 2px solid; }
+
+/* Default styles for common addons */
+
+div.CodeMirror span.CodeMirror-matchingbracket {color: #0b0;}
+div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #a22;}
+.CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
+.CodeMirror-activeline-background {background: #e8f2ff;}
+
+/* STOP */
+
+/* The rest of this file contains styles related to the mechanics of
+   the editor. You probably shouldn't touch them. */
+
+.CodeMirror {
+  position: relative;
+  overflow: hidden;
+  background: white;
+}
+
+.CodeMirror-scroll {
+  overflow: scroll !important; /* Things will break if this is overridden */
+  /* 30px is the magic margin used to hide the element's real scrollbars */
+  /* See overflow: hidden in .CodeMirror */
+  margin-bottom: -30px; margin-right: -30px;
+  padding-bottom: 30px;
+  height: 100%;
+  outline: none; /* Prevent dragging from highlighting the element */
+  position: relative;
+}
+.CodeMirror-sizer {
+  position: relative;
+  border-right: 30px solid transparent;
+}
+
+/* The fake, visible scrollbars. Used to force redraw during scrolling
+   before actual scrolling happens, thus preventing shaking and
+   flickering artifacts. */
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler {
+  position: absolute;
+  z-index: 6;
+  display: none;
+}
+.CodeMirror-vscrollbar {
+  right: 0; top: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.CodeMirror-hscrollbar {
+  bottom: 0; left: 0;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.CodeMirror-scrollbar-filler {
+  right: 0; bottom: 0;
+}
+.CodeMirror-gutter-filler {
+  left: 0; bottom: 0;
+}
+
+.CodeMirror-gutters {
+  position: absolute; left: 0; top: 0;
+  min-height: 100%;
+  z-index: 3;
+}
+.CodeMirror-gutter {
+  white-space: normal;
+  height: 100%;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: -30px;
+}
+.CodeMirror-gutter-wrapper {
+  position: absolute;
+  z-index: 4;
+  background: none !important;
+  border: none !important;
+}
+.CodeMirror-gutter-background {
+  position: absolute;
+  top: 0; bottom: 0;
+  z-index: 4;
+}
+.CodeMirror-gutter-elt {
+  position: absolute;
+  cursor: default;
+  z-index: 4;
+}
+.CodeMirror-gutter-wrapper ::selection { background-color: transparent }
+.CodeMirror-gutter-wrapper ::-moz-selection { background-color: transparent }
+
+.CodeMirror-lines {
+  cursor: text;
+  min-height: 1px; /* prevents collapsing before first draw */
+}
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
+  /* Reset some styles that the rest of the page might have set */
+  -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;
+  border-width: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  white-space: pre;
+  word-wrap: normal;
+  line-height: inherit;
+  color: inherit;
+  z-index: 2;
+  position: relative;
+  overflow: visible;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-variant-ligatures: contextual;
+  font-variant-ligatures: contextual;
+}
+.CodeMirror-wrap pre.CodeMirror-line,
+.CodeMirror-wrap pre.CodeMirror-line-like {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: normal;
+}
+
+.CodeMirror-linebackground {
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  z-index: 0;
+}
+
+.CodeMirror-linewidget {
+  position: relative;
+  z-index: 2;
+  padding: 0.1px; /* Force widget margins to stay inside of the container */
+}
+
+.CodeMirror-widget {}
+
+.CodeMirror-rtl pre { direction: rtl; }
+
+.CodeMirror-code {
+  outline: none;
+}
+
+/* Force content-box sizing for the elements where we expect it */
+.CodeMirror-scroll,
+.CodeMirror-sizer,
+.CodeMirror-gutter,
+.CodeMirror-gutters,
+.CodeMirror-linenumber {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.CodeMirror-measure {
+  position: absolute;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.CodeMirror-cursor {
+  position: absolute;
+  pointer-events: none;
+}
+.CodeMirror-measure pre { position: static; }
+
+div.CodeMirror-cursors {
+  visibility: hidden;
+  position: relative;
+  z-index: 3;
+}
+div.CodeMirror-dragcursors {
+  visibility: visible;
+}
+
+.CodeMirror-focused div.CodeMirror-cursors {
+  visibility: visible;
+}
+
+.CodeMirror-selected { background: #d9d9d9; }
+.CodeMirror-focused .CodeMirror-selected { background: #d7d4f0; }
+.CodeMirror-crosshair { cursor: crosshair; }
+.CodeMirror-line::selection, .CodeMirror-line > span::selection, .CodeMirror-line > span > span::selection { background: #d7d4f0; }
+.CodeMirror-line::-moz-selection, .CodeMirror-line > span::-moz-selection, .CodeMirror-line > span > span::-moz-selection { background: #d7d4f0; }
+
+.cm-searching {
+  background-color: #ffa;
+  background-color: rgba(255, 255, 0, .4);
+}
+
+/* Used to force a border model for a node */
+.cm-force-border { padding-right: .1px; }
+
+@media print {
+  /* Hide the cursor when printing */
+  .CodeMirror div.CodeMirror-cursors {
+    visibility: hidden;
+  }
+}
+
+/* See issue #2901 */
+.cm-tab-wrap-hack:after { content: ''; }
+
+/* Help users use markselection to safely style text background */
+span.CodeMirror-selectedtext { background: none; }
+</style><style type="text/css">/**
+    Name:       IDEA default theme
+    From IntelliJ IDEA by JetBrains
+ */
+
+.cm-s-idea span.cm-meta { color: #808000; }
+.cm-s-idea span.cm-number { color: #0000FF; }
+.cm-s-idea span.cm-keyword { line-height: 1em; font-weight: bold; color: #000080; }
+.cm-s-idea span.cm-atom { font-weight: bold; color: #000080; }
+.cm-s-idea span.cm-def { color: #000000; }
+.cm-s-idea span.cm-variable { color: black; }
+.cm-s-idea span.cm-variable-2 { color: black; }
+.cm-s-idea span.cm-variable-3, .cm-s-idea span.cm-type { color: black; }
+.cm-s-idea span.cm-property { color: black; }
+.cm-s-idea span.cm-operator { color: black; }
+.cm-s-idea span.cm-comment { color: #808080; }
+.cm-s-idea span.cm-string { color: #008000; }
+.cm-s-idea span.cm-string-2 { color: #008000; }
+.cm-s-idea span.cm-qualifier { color: #555; }
+.cm-s-idea span.cm-error { color: #FF0000; }
+.cm-s-idea span.cm-attribute { color: #0000FF; }
+.cm-s-idea span.cm-tag { color: #000080; }
+.cm-s-idea span.cm-link { color: #0000FF; }
+.cm-s-idea .CodeMirror-activeline-background { background: #FFFAE3; }
+
+.cm-s-idea span.cm-builtin { color: #30a; }
+.cm-s-idea span.cm-bracket { color: #cc7; }
+.cm-s-idea  { font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;}
+
+
+.cm-s-idea .CodeMirror-matchingbracket { outline:1px solid grey; color:black !important; }
+
+.CodeMirror-hints.idea {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  color: #616569;
+  background-color: #ebf3fd !important;
+}
+
+.CodeMirror-hints.idea .CodeMirror-hint-active {
+  background-color: #a2b8c9 !important;
+  color: #5c6065 !important;
+}</style><style type="text/css">/**
+    Name: IntelliJ IDEA darcula theme
+    From IntelliJ IDEA by JetBrains
+ */
+
+.cm-s-darcula  { font-family: Consolas, Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace, serif;}
+.cm-s-darcula.CodeMirror { background: #2B2B2B; color: #A9B7C6; } 
+
+.cm-s-darcula span.cm-meta { color: #BBB529; }
+.cm-s-darcula span.cm-number { color: #6897BB; }
+.cm-s-darcula span.cm-keyword { color: #CC7832; line-height: 1em; font-weight: bold; }  
+.cm-s-darcula span.cm-def { color: #A9B7C6; font-style: italic; }
+.cm-s-darcula span.cm-variable { color: #A9B7C6; }
+.cm-s-darcula span.cm-variable-2 { color: #A9B7C6; }
+.cm-s-darcula span.cm-variable-3 { color: #9876AA; }
+.cm-s-darcula span.cm-type { color: #AABBCC; font-weight: bold; }
+.cm-s-darcula span.cm-property { color: #FFC66D; }
+.cm-s-darcula span.cm-operator { color: #A9B7C6; }
+.cm-s-darcula span.cm-string { color: #6A8759; }
+.cm-s-darcula span.cm-string-2 { color: #6A8759; }
+.cm-s-darcula span.cm-comment { color: #61A151; font-style: italic; } 
+.cm-s-darcula span.cm-link { color: #CC7832; }
+.cm-s-darcula span.cm-atom { color: #CC7832; }
+.cm-s-darcula span.cm-error { color: #BC3F3C; }
+.cm-s-darcula span.cm-tag { color: #629755; font-weight: bold; font-style: italic; text-decoration: underline; }
+.cm-s-darcula span.cm-attribute { color: #6897bb; }
+.cm-s-darcula span.cm-qualifier { color: #6A8759; }
+.cm-s-darcula span.cm-bracket { color: #A9B7C6; }
+.cm-s-darcula span.cm-builtin { color: #FF9E59; }
+.cm-s-darcula span.cm-special { color: #FF9E59; }
+
+.cm-s-darcula .CodeMirror-cursor { border-left: 1px solid #A9B7C6; }  
+.cm-s-darcula .CodeMirror-activeline-background { background: #323232; } 
+.cm-s-darcula .CodeMirror-gutters { background: #313335; border-right: 1px solid #313335; } 
+.cm-s-darcula .CodeMirror-guttermarker { color: #FFEE80; }  
+.cm-s-darcula .CodeMirror-guttermarker-subtle { color: #D0D0D0; }  
+.cm-s-darcula .CodeMirrir-linenumber { color: #606366; } 
+.cm-s-darcula .CodeMirror-matchingbracket { background-color: #3B514D; color: #FFEF28 !important; font-weight: bold; } 
+
+.cm-s-darcula div.CodeMirror-selected { background: #214283; }  
+
+.CodeMirror-hints.darcula {
+  font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+  color: #9C9E9E;
+  background-color: #3B3E3F !important;
+}
+
+.CodeMirror-hints.darcula .CodeMirror-hint-active {
+  background-color: #494D4E !important;
+  color: #9C9E9E !important;
+}
+</style><style type="text/css">.CodeMirror-simplescroll-horizontal div, .CodeMirror-simplescroll-vertical div {
+  position: absolute;
+  background: #ccc;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+}
+
+.CodeMirror-simplescroll-horizontal, .CodeMirror-simplescroll-vertical {
+  position: absolute;
+  z-index: 6;
+  background: #eee;
+}
+
+.CodeMirror-simplescroll-horizontal {
+  bottom: 0; left: 0;
+  height: 8px;
+}
+.CodeMirror-simplescroll-horizontal div {
+  bottom: 0;
+  height: 100%;
+}
+
+.CodeMirror-simplescroll-vertical {
+  right: 0; top: 0;
+  width: 8px;
+}
+.CodeMirror-simplescroll-vertical div {
+  right: 0;
+  width: 100%;
+}
+
+
+.CodeMirror-overlayscroll .CodeMirror-scrollbar-filler, .CodeMirror-overlayscroll .CodeMirror-gutter-filler {
+  display: none;
+}
+
+.CodeMirror-overlayscroll-horizontal div, .CodeMirror-overlayscroll-vertical div {
+  position: absolute;
+  background: #bcd;
+  border-radius: 3px;
+}
+
+.CodeMirror-overlayscroll-horizontal, .CodeMirror-overlayscroll-vertical {
+  position: absolute;
+  z-index: 6;
+}
+
+.CodeMirror-overlayscroll-horizontal {
+  bottom: 0; left: 0;
+  height: 6px;
+}
+.CodeMirror-overlayscroll-horizontal div {
+  bottom: 0;
+  height: 100%;
+}
+
+.CodeMirror-overlayscroll-vertical {
+  right: 0; top: 0;
+  width: 6px;
+}
+.CodeMirror-overlayscroll-vertical div {
+  right: 0;
+  width: 100%;
+}
+</style><style type="text/css">.executable-fragment-wrapper{margin-bottom:35px;position:relative}.executable-fragment-wrapper_gutter .CodeMirror{overflow:hidden}.executable-fragment-wrapper__shorter,.executable-fragment-wrapper__shorter:hover,.executable-fragment-wrapper__shorter:active{box-shadow:0 0 0 transparent;outline:0 none transparent;text-shadow:0 0 0 transparent;border:1px solid #eaeaec;background:#fff url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5 6L0 0H10L5 6Z' fill='%23afb1b3'/%3E %3C/svg%3E") center center no-repeat;border-radius:10px;position:absolute;height:19px;width:31px;left:50%;transform:translate(-50%, -50%);z-index:10;cursor:pointer;text-indent:-99999px}.theme-darcula-wrapper .executable-fragment-wrapper__shorter,.theme-darcula-wrapper .executable-fragment-wrapper__shorter:hover,.theme-darcula-wrapper .executable-fragment-wrapper__shorter:active{background-color:#2B2B2B;border-color:#fff}.executable-fragment{border:1px solid #eaeaec;border-bottom-width:0}.executable-fragment.darcula{border:1px solid gray;border-bottom-width:0;background-color:#313336}.hidden-dependency{display:none}.CodeMirror{height:auto;font-size:12px}.CodeMirror pre{line-height:16.8px;margin-bottom:0 !important}.CodeMirror .CodeMirror-overlayscroll-horizontal div,.CodeMirror .CodeMirror-overlayscroll-vertical div{display:none}.CodeMirror:hover .CodeMirror-overlayscroll-horizontal div,.CodeMirror:hover .CodeMirror-overlayscroll-vertical div{display:block;background:#afb1b3}.CodeMirror-lines{padding:0;margin:12px 0}.CodeMirror-gutter{height:auto}.CodeMirror{line-height:1.4;font-family:menlo, consolas, monospace;font-size:12px}.CodeMirror-linenumber{min-width:0;text-align:center}.CodeMirror-linebackground.unmodifiable-line{background-color:#eaeaec}.CodeMirror-linebackground.unmodifiable-line-dark{background-color:#3c3f43}.markPlaceholder{border-top:1px solid #167dff;border-bottom:1px solid #167dff}.markPlaceholder-start{border-left:1px solid #167dff}.markPlaceholder-end{border-right:1px solid #167dff}.run-button{position:absolute;z-index:10;right:5px;top:5px;height:20px;width:16px;cursor:pointer;background-size:cover;background:url("data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 16.996 20.999' enable-background='new 0 0 16.996 20.999' xml:space='preserve'%3E %3Cpolygon fill='%2338B058' points='16.996,10.499 0,20.999 0,0 '/%3E %3C/svg%3E") no-repeat}.run-button._disabled{cursor:default;opacity:0.5}.loader{position:relative;width:15px;height:15px;margin:0 auto;border-radius:50%;text-indent:-9999em;color:#161616;font-size:8px;opacity:.7;animation:loader 1s infinite ease-in-out;animation-delay:0.16s}.loader.darcula{opacity:1;color:#696969}.loader::before{left:-3.5em;animation-delay:0s;position:absolute;width:15px;border-radius:50%;height:15px;content:'';animation:loader 1s infinite ease-in-out}.loader::after{left:3.5em;animation-delay:0.32s;position:absolute;border-radius:50%;width:15px;height:15px;content:'';animation:loader 1s infinite ease-in-out}@keyframes loader{100%{box-shadow:0 2.5em 0 -1.3em}80%{box-shadow:0 2.5em 0 -1.3em}0%{box-shadow:0 2.5em 0 -1.3em}40%{box-shadow:0 2.5em 0 0}}.cm__ERROR{color:#ec5424 !important}.cm__IMPORT{text-decoration:underline;padding-bottom:2px}.errors-and-warnings-gutter{width:16px}.ERRORgutter{height:13px;width:13px;margin-top:2px;margin-left:2px;background:url("https://try.kotlinlang.org/static/images/icons_all_sprite.svg") no-repeat -150px -500px}.WARNINGgutter{height:13px;width:13px;margin-top:2px;margin-left:2px;background:url("https://try.kotlinlang.org/static/images/icons_all_sprite.svg") no-repeat -150px -600px}.cm__red_wavy_line{background:url("https://try.kotlinlang.org/static/images/wavyline-red.gif") repeat-x 100% 100%;padding-bottom:2px}.cm__green_wavy_line{background:url("https://try.kotlinlang.org/static/images/wavyline-green.gif") repeat-x 100% 100%;padding-bottom:2px}.js-code-output-executor{border-top:1px solid #eaeaec;position:relative}.js-code-output-executor.darcula{border-top:1px solid grey}.output-wrapper{flex-direction:column;display:flex;border-bottom:1px solid #eaeaec;min-height:60px;font-size:14px;background-color:white}.output-wrapper.darcula{background-color:#313336;color:#afb1b3}.code-output{flex-grow:1;font-family:"Liberation Mono",Consolas,Menlo,Courier,monospace;overflow:auto;padding-left:10px;padding-top:15px}.standard-output.darcula{color:#afb1b3}.error-output{white-space:pre-wrap;color:#ec5424;min-height:1.4em;margin:0;vertical-align:top}.error-output.darcula{color:#ec5424}.standard-output{white-space:pre;color:#000;min-height:1.4em;margin:0;vertical-align:top}.test-passed{white-space:pre;color:#4dbb5f;min-height:1.4em;vertical-align:top}.console-close{position:absolute;right:0;width:16px;height:16px;background:#afb1b3 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E %3Ctitle%3Eicons_all_sprite%3C/title%3E %3Cg id='Layer_4' data-name='Layer 4'%3E %3Cpolygon points='13.5 12.125 9.375 8 13.5 3.875 12.125 2.5 8 6.625 3.875 2.5 2.5 3.875 6.625 8 2.5 12.125 3.875 13.5 8 9.375 12.125 13.5 13.5 12.125' fill='%23ffffff' opacity='0.9'/%3E %3C/g%3E %3C/svg%3E") no-repeat}.console-close.darcula{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E %3Ctitle%3Eicons_all_sprite%3C/title%3E %3Cg id='Layer_4' data-name='Layer 4'%3E %3Cpolygon points='13.5 12.125 9.375 8 13.5 3.875 12.125 2.5 8 6.625 3.875 2.5 2.5 3.875 6.625 8 2.5 12.125 3.875 13.5 8 9.375 12.125 13.5 13.5 12.125' fill='%23ffffff' opacity='0.9'/%3E %3C/g%3E %3C/svg%3E")}.console-close:hover{background-color:dimgray}.console-close.darcula:hover{background-color:#ec5424}.test-fail,.test-error{color:#ec5424;min-height:1.4em;vertical-align:top}.console-block{display:flex}.console-icon{margin-top:2px;padding-right:20px;width:15px;height:15px}.console-icon.attention{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E %3Ctitle%3Eicons_all_sprite%3C/title%3E %3Cg id='Layer_4' data-name='Layer 4'%3E %3Cg%3E %3Ccircle cx='8' cy='8' r='6' fill='%23e05219' opacity='0.9' style='isolation: isolate'/%3E %3Cpath d='M8.99609,4.98828V6.48193a.4905.4905,0,0,1-.00976.09619L8.28174,9H7.71045L7.00586,6.57812A.44233.44233,0,0,1,7,6.521V5c0-.26465,0-.99023.47559-.99023h1.041C9,4.00977,8.99609,4.72363,8.99609,4.98828Zm-.10547,5.9329L8.42627,10.31a.47056.47056,0,0,0-.37354-.18943H7.94092a.47078.47078,0,0,0-.374.18943l-.46435.61117A.52557.52557,0,0,0,7,11.22882v.28184A.49088.49088,0,0,0,7.47607,12h1.041a.49312.49312,0,0,0,.479-.50638l.00049-.25447A.52333.52333,0,0,0,8.89062,10.92118Z' fill='%23fff'/%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat}.console-icon.passed{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E %3Ctitle%3Eicons_all_sprite%3C/title%3E %3Cg id='Layer_4' data-name='Layer 4'%3E %3Ccircle cx='8' cy='8' r='7' fill='%234ca01f' opacity='0.9' style='isolation: isolate'/%3E %3Cpolygon points='12.808 6.205 11.5 5.025 7.486 9.625 4.346 6.077 3.125 7.182 7.5 12 12.808 6.205' fill='%23fff'/%3E %3C/g%3E %3C/svg%3E") no-repeat}.console-icon.fail{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E %3Ctitle%3Eicons_all_sprite%3C/title%3E %3Cg id='Layer_4' data-name='Layer 4'%3E %3Cg style='isolation: isolate'%3E %3Ccircle cx='7.5' cy='7.5' r='6.5' fill='%23e05219'/%3E %3C/g%3E %3Cpolygon points='10.328 9.621 8.207 7.5 10.328 5.379 9.621 4.672 7.5 6.793 5.379 4.672 4.672 5.379 6.793 7.5 4.672 9.621 5.379 10.328 7.5 8.207 9.621 10.328 10.328 9.621' fill='%23fff'/%3E %3C/g%3E %3C/svg%3E") no-repeat}.console-icon.error{background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E %3Ctitle%3Eicons_all_sprite%3C/title%3E %3Cg id='Layer_4' data-name='Layer 4'%3E %3Cg style='isolation: isolate'%3E %3Ccircle cx='7.5' cy='7.5' r='6.5' fill='%23e05219'/%3E %3C/g%3E %3Cpolygon points='10.328 9.621 8.207 7.5 10.328 5.379 9.621 4.672 7.5 6.793 5.379 4.672 4.672 5.379 6.793 7.5 4.672 9.621 5.379 10.328 7.5 8.207 9.621 10.328 10.328 9.621' fill='%23fff'/%3E %3C/g%3E %3C/svg%3E") no-repeat}.test-time{float:right;font-size:10px;color:#afb1b3;margin-right:20px;margin-top:-14px}.stacktrace-element{margin-left:20px}.stacktrace-element .stacktrace-link{color:#167dff;cursor:pointer}.stacktrace-element .stacktrace-link:hover{text-decoration:underline}.CodeMirror-foldgutter{position:absolute;width:100%}.CodeMirror-foldgutter-folded{width:100%;background:white}.fold-button{position:absolute;height:19px;width:31px;top:0;left:50%;transform:translate(-50%, -50%);z-index:10;cursor:pointer;background:transparent url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%23FFFFFF' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z' /%3E %3Cpath class='data-fill' fill='%23d4d4d4' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z' /%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23d4d4d4' points='21,9 10,9 10,10 21,10 21,9 ' /%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-1.836970e-16 1 -1 -1.836970e-16 25 -6)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23d4d4d4' points='16,4 15,4 15,15 16,15 16,4 ' /%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat}.fold-button._hover{background-image:url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%23FFFFFF' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z' /%3E %3Cpath class='data-fill' fill='%23f68322' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z' /%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='21,9 10,9 10,10 21,10 21,9 ' /%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-1.836970e-16 1 -1 -1.836970e-16 25 -6)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='16,4 15,4 15,15 16,15 16,4 ' /%3E %3C/g%3E %3C/g%3E %3C/svg%3E")}.fold-button.darcula{background:url("data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%232B2B2B' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z'/%3E %3Cpath class='data-fill' fill='%23ffffff' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z'/%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' fill='%23EAEAEC' width='11' height='1'/%3E %3Cpolygon class='data-fill' fill='%23EAEAEC' points='21,9 10,9 10,10 21,10 21,9 '/%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-1.836970e-16 1 -1 -1.836970e-16 25 -6)' fill='%23EAEAEC' width='11' height='1'/%3E %3Cpolygon class='data-fill' fill='%23EAEAEC' points='16,4 15,4 15,15 16,15 16,4 '/%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat}.fold-button.darcula._hover{background-image:url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%232B2B2B' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z' /%3E %3Cpath class='data-fill' fill='%23f68322' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z' /%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' fill='%23EAEAEC' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='21,9 10,9 10,10 21,10 21,9 ' /%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-1.836970e-16 1 -1 -1.836970e-16 25 -6)' fill='%23EAEAEC' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='16,4 15,4 15,15 16,15 16,4 ' /%3E %3C/g%3E %3C/g%3E %3C/svg%3E")}._unfolded .fold-button{background-image:url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%23FFFFFF' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z' /%3E %3Cpath class='data-fill' fill='%23d4d4d4' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z' /%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(0.7071 0.7071 -0.7071 0.7071 11.2574 -8.1777)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23d4d4d4' points='11.964,5.257 11.257,5.964 19.036,13.743 19.743,13.036 11.964,5.257 ' /%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-0.7071 0.7071 -0.7071 -0.7071 33.1777 5.2574)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23d4d4d4' points='19.036,5.257 11.257,13.036 11.964,13.743 19.743,5.964 19.036,5.257 ' /%3E %3C/g%3E %3C/g%3E %3C/svg%3E")}._unfolded .fold-button._hover{background-image:url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%23FFFFFF' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z' /%3E %3Cpath class='data-fill' fill='%23f68322' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z' /%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(0.7071 0.7071 -0.7071 0.7071 11.2574 -8.1777)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='11.964,5.257 11.257,5.964 19.036,13.743 19.743,13.036 11.964,5.257 ' /%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-0.7071 0.7071 -0.7071 -0.7071 33.1777 5.2574)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='19.036,5.257 11.257,13.036 11.964,13.743 19.743,5.964 19.036,5.257 ' /%3E %3C/g%3E %3C/g%3E %3C/svg%3E")}._unfolded .fold-button.darcula{background:url("data:image/svg+xml,%3C?xml version='1.0' encoding='utf-8'?%3E %3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%232B2B2B' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z'/%3E %3Cpath class='data-fill' fill='%23EAEAEC' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z'/%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(0.7071 0.7071 -0.7071 0.7071 11.2574 -8.1777)' fill='%23FFFFFF' width='11' height='1'/%3E %3Cpolygon class='data-fill' fill='%23EAEAEC' points='11.964,5.257 11.257,5.964 19.036,13.743 19.743,13.036 11.964,5.257 '/%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-0.7071 0.7071 -0.7071 -0.7071 33.1777 5.2574)' fill='%23FFFFFF' width='11' height='1'/%3E %3Cpolygon class='data-fill' fill='%23EAEAEC' points='19.036,5.257 11.257,13.036 11.964,13.743 19.743,5.964 19.036,5.257 '/%3E %3C/g%3E %3C/g%3E %3C/svg%3E") no-repeat}._unfolded .fold-button.darcula._hover{background-image:url("data:image/svg+xml,%3C!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 31 19' enable-background='new 0 0 31 19' xml:space='preserve'%3E %3Cg%3E %3Cpath fill='%232B2B2B' d='M21.5,19h-12C4.253,19,0,14.747,0,9.5v0C0,4.253,4.253,0,9.5,0h12C26.747,0,31,4.253,31,9.5v0 C31,14.747,26.747,19,21.5,19z' /%3E %3Cpath class='data-fill' fill='%23f68322' d='M21.5,1C26.187,1,30,4.813,30,9.5c0,4.687-3.813,8.5-8.5,8.5h-12C4.813,18,1,14.187,1,9.5 C1,4.813,4.813,1,9.5,1H21.5 M21.5,0h-12C4.253,0,0,4.253,0,9.5v0C0,14.747,4.253,19,9.5,19h12c5.247,0,9.5-4.253,9.5-9.5v0 C31,4.253,26.747,0,21.5,0L21.5,0z' /%3E %3C/g%3E %3Cg%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(0.7071 0.7071 -0.7071 0.7071 11.2574 -8.1777)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='11.964,5.257 11.257,5.964 19.036,13.743 19.743,13.036 11.964,5.257 ' /%3E %3C/g%3E %3Cg%3E %3Crect x='10' y='9' transform='matrix(-0.7071 0.7071 -0.7071 -0.7071 33.1777 5.2574)' fill='%23FFFFFF' width='11' height='1' /%3E %3Cpolygon class='data-fill' fill='%23f68322' points='19.036,5.257 11.257,13.036 11.964,13.743 19.743,5.964 19.036,5.257 ' /%3E %3C/g%3E %3C/g%3E %3C/svg%3E")}.code-area{position:relative}.compiler-info{display:flex;justify-content:flex-end;padding-top:5px;position:absolute;right:0;left:0}.compiler-info,.compiler-info a{font-size:10px;color:#afb1b3}.compiler-info span{margin-left:15px}.compiler-info_crosslink{justify-content:space-between}.compiler-info__open-editor{flex:1 1 0}.compiler-info__target,.compiler-info__version{white-space:nowrap}.CodeMirror-hints{padding-left:0 !important;border:1px solid #afb1b3;border-radius:4px;list-style:none;position:absolute;background-color:#f7f7f7;overflow-y:hidden;z-index:10;max-height:20em;box-shadow:2px 3px 5px rgba(0,0,0,0.2)}.CodeMirror-hint{cursor:pointer;display:flex;align-items:center;padding-right:5px;padding-left:5px}li.CodeMirror-hint-active{background-color:#d8d8d8;color:#000000}li.CodeMirror-hint-active .name{overflow:auto;white-space:normal}.CodeMirror-hint .name{margin-right:20px;max-width:60ch;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}li.CodeMirror-hint-active .tail{overflow:auto;white-space:normal}.CodeMirror-hint .tail{margin-left:auto;margin-right:5px;max-width:30ch;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}.CodeMirror-hint .icon{height:16px;width:16px;margin-right:5px}.icon{background:url("https://try.kotlinlang.org/static/images/icons_all_sprite.svg")}.icon.class{background:url("https://try.kotlinlang.org/static/images/completion_class.svg")}.icon.package{background:url("https://try.kotlinlang.org/static/images/completion_package.svg")}.icon.method{background:url("https://try.kotlinlang.org/static/images/completion_method.svg")}.icon.genericValue{background:url("https://try.kotlinlang.org/static/images/completion_generic.svg")}.icon.property{background:url("https://try.kotlinlang.org/static/images/completion_property.svg")}div[label]:hover:after{content:attr(label);padding:0.25rem 0.5rem;white-space:pre;margin-top:-1rem;display:inline-flex;background:#feffde;border-radius:3px;margin-left:1rem;color:black;border:1px solid #3c3f43}
+</style><meta http-equiv="origin-trial" content="A727AcAeLCei/ZogJHBlJUS63SxP6AeIROo7qXrkjrxkoxBu0eSSmypAHmGYwk4HjBMQp5nxCFODzfVnUIe31AQAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjg4MDgzMTk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/f.txt"></script><script type="text/javascript" async="" src="../../../../../Kotlin%20Programming%20Language_files/munchkin(1).js"></script><style>.kotlin-intro-featured{display: none}</style><style>.kotlin-intro-section__supports{display: none}</style><style>.kotlin-intro-actions{margin-bottom: 0px}</style></head>
+<body class="page_js_yes has-optimize-banner"><!-- Optimize banner -->
+<a target="_blank" id="optimize-banner" href="https://kotl.in/f6ughl" style="display: block;">
+  <span class="optimize-banner__inner">
+    <span class="optimize-banner__inner-text-desktop">Join our webinar to learn about hexagonal architecture inside the Hexagon Toolkit</span>
+    <span class="optimize-banner__inner-text-mobile">Join our webinar to learn about hexagonal architecture inside the Hexagon Toolkit</span>
+      <!-- close button -->
+    <button type="button" aria-label="Close" class="optimize-banner__close">
+      <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" fill="#fff" d="M19.707 5.707l-1.414-1.414L12 10.586 5.707 4.293 4.293 5.707 10.586 12l-6.293 6.293 1.414 1.414L12 13.414l6.293 6.293 1.414-1.414L13.414 12l6.293-6.293z"></path>
+      </svg>
+    </button>
+  </span>
+</a>
+
+<style>
+:root {
+    --optimize-banner-height: 52px;
+}
+
+#optimize-banner, #optimize-banner:hover, #optimize-banner:visited {
+    display: none;
+    text-decoration: none!important;
+    color: #E8F0FE!important;
+    font-family: Inter, Arial, sans-serif!important;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.2;
+    position: relative;
+    text-align: center;
+    background-color: #7F52FF;
+}
+.optimize-banner__inner {
+    display: flex;
+    margin: 0 10px;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--optimize-banner-height);
+}
+.optimize-banner__like-link {
+    display: inline-block;
+    padding: 0 4px;
+    text-decoration: underline;
+}
+.optimize-banner__close {
+    display: block;
+    background-color: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    padding: 4px;
+    box-sizing: border-box;
+}
+.optimize-banner__inner-text-desktop {
+    display: none;
+}
+
+.optimize-banner__inner-text-mobile {
+    padding: 8px 0;
+}
+
+.optimize-banner__inner-text-desktop, .optimize-banner__inner-text-mobile {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.has-optimize-banner .header-menu__sticky {
+    position: sticky;
+    z-index: 10000;
+    top: 0;
+}
+.has-optimize-banner .mpp-layout__sticky-header, .has-optimize-banner .server-side-main_sticky-header {
+    padding: 0;
+}
+
+.has-optimize-banner:not([data-mobile-navigation-state="open"]) #webhelp-root {
+    height: calc(100% - var(--optimize-banner-height));
+}
+
+/* Dokka-related pages */
+body.has-optimize-banner > #container {
+    height: calc(100% - var(--optimize-banner-height) - var(--top-navigation-height));
+}
+
+@media (max-width: 480px) {
+    .has-optimize-banner #optimize-banner, .has-optimize-banner #optimize-banner:hover,
+    .has-optimize-banner  #optimize-banner:visited {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) {
+    :root {
+        --optimize-banner-height: 36px;
+    }
+
+    .has-optimize-banner .optimize-banner__inner-text-desktop {
+        display: inline;
+    }
+
+    .has-optimize-banner .optimize-banner__inner-text-mobile {
+        display: none;
+    }
+
+    .optimize-banner__inner {
+        height: var(--optimize-banner-height);
+    }
+}
+
+/* webhelp pages */
+@media (max-width: 1000px) {
+    body[data-mobile-navigation-state="open"] #optimize-banner {
+        display: none !important;
+    }
+}
+</style>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P98" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<div class="global-layout">
+<!-- ktl_component: {"name": "header", "props": {"productWebUrl": "https://github.com/JetBrains/kotlin/releases/tag/v1.8.10", "hasSearch": true, "dropdownTheme": "dark", "currentUrl": "/"}} --><div><header class="ktl-header-module_header-menu_wh71L ktl-header-module_border_paN11" data-test="header"><div class="ktl-logo-large-module_container_35w4p rs-text-3 rs-text-3_hardness_average rs-text-3_theme_dark"><a class="ktl-logo-large-module_link_AOGas" href="https://kotlinlang.org/" aria-label="Kotlin Home Page"><svg width="98" height="22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M43.314 1.067h-4.031L30.5 10.422V1.098H27.27v20.273H30.5v-9.82l8.814 9.82h4.177l-9.397-10.484 9.22-9.82Z" fill="#fff"></path><path d="M54.303 7.186c-1.153-.66-2.45-.994-3.901-.994-1.478 0-2.803.33-3.973.994a7.042 7.042 0 0 0-2.735 2.758c-.65 1.179-.976 2.515-.976 4.01 0 1.494.325 2.835.972 4.01a6.967 6.967 0 0 0 2.716 2.758c1.166.659 2.486.993 3.964.993 1.46 0 2.766-.33 3.923-.993a6.941 6.941 0 0 0 2.694-2.759c.642-1.178.963-2.515.963-4.01 0-1.494-.32-2.83-.963-4.009a6.949 6.949 0 0 0-2.684-2.758Zm-.204 9.328c-.357.74-.859 1.314-1.505 1.73-.646.415-1.392.622-2.233.622-.85 0-1.604-.207-2.26-.623a4.184 4.184 0 0 1-1.528-1.73c-.361-.74-.542-1.589-.542-2.555 0-.966.185-1.815.551-2.555a4.177 4.177 0 0 1 1.537-1.73c.656-.415 1.415-.623 2.278-.623.832 0 1.573.208 2.22.623a4.125 4.125 0 0 1 1.5 1.73c.353.74.529 1.59.529 2.555-.009.962-.19 1.815-.547 2.556ZM64.555 2.836h-3.132v2.52c0 .397-.095.695-.29.889-.194.198-.492.298-.899.298h-1.537v2.664h2.667v7.978c0 .83.167 1.562.506 2.194a3.591 3.591 0 0 0 1.442 1.472c.624.348 1.36.52 2.21.52h2.391v-2.782h-1.798c-.466 0-.841-.163-1.13-.483-.29-.325-.434-.75-.434-1.282V9.207h3.448V6.543h-3.448V2.836h.004ZM73.68.286h-3.186V21.37h3.187V.286ZM80.498.312H77.28v3.273h3.218V.312ZM80.466 6.544H77.28V21.37h3.186V6.544ZM96.67 8.99a4.969 4.969 0 0 0-1.899-2.054c-.818-.492-1.772-.74-2.866-.74-1.161 0-2.178.284-3.05.848-.697.447-1.257 1.052-1.7 1.797l-.018-2.298H84.09V21.37h3.191v-8.298c0-.8.154-1.513.457-2.136a3.39 3.39 0 0 1 1.293-1.45c.556-.342 1.202-.514 1.948-.514.669 0 1.238.14 1.717.42.48.28.841.682 1.085 1.201.249.52.37 1.142.37 1.87v8.907h3.192v-9.355c0-1.138-.226-2.149-.674-3.025Z" fill="#fff"></path><path d="M20 21H0V1h20L9.793 10.855 20 21Z" fill="url(#kotlin-logo-large_svg__a)"></path><defs><radialgradient id="kotlin-logo-large_svg__a" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(19.335 1.822) scale(22.9097)"><stop offset="0.003" stop-color="#EF4857"></stop><stop offset="0.469" stop-color="#D211EC"></stop><stop offset="1" stop-color="#7F52FF"></stop></radialgradient></defs></svg></a><a class="ktl-logo-large-module_version-tag_k12Hw" href="https://github.com/JetBrains/kotlin/releases/tag/v1.8.10" target="_blank">v1.8.10</a></div><nav class="ktl-horizontal-menu-module_nav_gbA7M ktl-horizontal-menu-module_dark-theme_gfxx6"><ul class="ktl-horizontal-menu-module_menu-list_TJnOF"><li class="ktl-horizontal-menu-module_menu-item-wrap_j6zB-"><a href="https://kotlinlang.org/lp/mobile/" class="ktl-horizontal-menu-module_menu-item_CXDEW rs-text-2 rs-text-2_theme_dark _nav-changed">Multiplatform</a></li><li class="ktl-horizontal-menu-module_menu-item-wrap_j6zB-" style="display: none;"><span class="ktl-horizontal-menu-module_menu-item_CXDEW rs-text-2 rs-text-2_theme_dark">Solutions</span><ul class="ktl-horizontal-menu-module_dropdown-menu_jwdWI rs-text-2 rs-text-2_theme_dark"><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://kotlinlang.org/lp/mobile/">Multiplatform</a></li><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://kotlinlang.org/lp/server-side/">Server-side</a></li><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://kotlinlang.org/docs/data-science-overview.html">Data science</a></li><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://kotlinlang.org/docs/android-overview.html">Android</a></li></ul></li><li class="ktl-horizontal-menu-module_menu-item-wrap_j6zB-"><a href="https://kotlinlang.org/docs/home.html" class="ktl-horizontal-menu-module_menu-item_CXDEW rs-text-2 rs-text-2_theme_dark">Docs</a></li><li class="ktl-horizontal-menu-module_menu-item-wrap_j6zB-"><a href="https://kotlinlang.org/community/" class="ktl-horizontal-menu-module_menu-item_CXDEW rs-text-2 rs-text-2_theme_dark">Community</a></li><li class="ktl-horizontal-menu-module_menu-item-wrap_j6zB-"><a href="https://kotlinlang.org/education/" class="ktl-horizontal-menu-module_menu-item_CXDEW rs-text-2 rs-text-2_theme_dark">Teach</a></li><li class="ktl-horizontal-menu-module_menu-item-wrap_j6zB-"><span class="ktl-horizontal-menu-module_menu-item_CXDEW rs-text-2 rs-text-2_theme_dark">Play</span><ul class="ktl-horizontal-menu-module_dropdown-menu_jwdWI rs-text-2 rs-text-2_theme_dark ktl-horizontal-menu-module_dropdown-menu-align-right_YeB-9"><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://play.kotlinlang.org/">Playground</a></li><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://play.kotlinlang.org/hands-on">Hands-on</a></li><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://play.kotlinlang.org/byExample">Examples</a></li><li><a class="ktl-horizontal-menu-module_dropdown-menu-item_9gjwH" href="https://play.kotlinlang.org/koans">Koans</a></li></ul></li></ul></nav><button type="button" class="ktl-search-button-module_button_YHJPv ktl-search-button-module_active_lUmdh" data-test="header-search-button" aria-label="Search"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M15.847 6.861A6.99 6.99 0 0 0 9.587 3a6.997 6.997 0 1 0 4.186 12.601l6.106 6.106 1.414-1.414-6.107-6.106a6.99 6.99 0 0 0 .66-7.326ZM14.587 10a5 5 0 1 1-10.001 0 5 5 0 0 1 10 0Z" fill="currentColor"></path></svg></button></header></div>
+<section class="kotlin-intro-section kto-overview-section kto-overview-section_mode_dark">
+    <div class="g-layout">
+        <h1 class="kto-heading kto-heading_size_hero">
+          Concise. Cross‑platform. Fun.
+        </h1>
+        <div class="kotlin-intro-actions">
+            <p class="kotlin-intro-actions__buttons">
+                <a class="kto-button kto-button_theme_dark kto-button_size_l kto-button_mode_primary" href="https://kotlinlang.org/docs/getting-started.html">Get started</a>
+            </p>
+            <p class="kotlin-intro-actions__contributors kto-text kto-text_size_s">
+                <a target="_blank" href="https://www.jetbrains.com/" class="kotlin-intro-actions__jb-logo"><img class="kotlin-intro-actions__logo" src="../../../../../Kotlin%20Programming%20Language_files/jetbrains-logo.svg" alt="jetbrains logo" width="32" height="32"></a>
+                <span class="kto-text kto-text_size_s">
+                    Developed by&nbsp;<a target="_blank" href="https://www.jetbrains.com/" class="kto-link kto-link_theme_dark">JetBrains</a>
+                    &amp; Open-source&nbsp;<a target="_blank" href="https://github.com/JetBrains/kotlin/graphs/contributors" class="kto-link kto-link_theme_dark">Contributors</a>
+                </span>
+            </p>
+        </div>
+        <div class="kotlin-intro-featured">
+            <a class="kotlin-intro-featured__item kotlin-intro-featured__item_type_mobile" href="https://kotlinlang.org/lp/mobile/">
+                <h3 class="kto-heading kto-heading_size_h3">Multiplatform Mobile</h3>
+                <p class="kto-text kto-text_size_m">Share the logic of your Android and iOS apps while keeping UX native</p>
+            </a>
+            <a class="kotlin-intro-featured__item kotlin-intro-featured__item_type_server-side" href="https://kotlinlang.org/lp/server-side/">
+                <h3 class="kto-heading kto-heading_size_h3">Server-side</h3>
+                <p class="kto-text kto-text_size_m">Modern development experience with familiar JVM technology</p>
+            </a>
+            <a class="kotlin-intro-featured__item kotlin-intro-featured__item_type_multiplatform" href="https://kotlinlang.org/docs/multiplatform-library.html">
+                <h3 class="kto-heading kto-heading_size_h3">Multiplatform libraries</h3>
+                <p class="kto-text kto-text_size_m">Create a library that works across several platforms</p>
+            </a>
+            <a class="kotlin-intro-featured__item kotlin-intro-featured__item_type_android" href="https://kotlinlang.org/docs/android-overview.html">
+                <h3 class="kto-heading kto-heading_size_h3">Android</h3>
+                <p class="kto-text kto-text_size_m">Recommended by Google for building Android apps</p>
+            </a>
+        </div>
+        <p class="kotlin-intro-section__supports kto-text kto-text_size_m">
+            <a class="kotlin-intro-section__link" href="https://kotlinlang.org/docs/data-science-overview.html"><span class="kto-link kto-link_theme_dark">Data Science</span> </a>
+        </p>
+    </div>
+</section>
+    <section class="kotlin-banner-section kto-overview-section kto-overview-section_mode_dark kotlin-banner-section_first" data-test="index-page-banner">
+      <div class="g-layout">
+
+<h2 class="kotlin-banner-section__header kto-heading kto-heading_size_h1">Latest from Kotlin</h2>
+<div class="kotlin-banner-section__banner">
+  <a target="_blank" class="kotlin-banner-section__link" href="https://blog.jetbrains.com/kotlin/2023/02/k2-kotlin-2-0/">
+    <picture>
+      <source media="(max-width: 537px)" srcset="/assets/images/index/banners/kotlin_2.0_blog-mobile.jpg">
+      <img src="../../../../../Kotlin%20Programming%20Language_files/kotlin_2.0_blog.jpg" alt="The K2 Compiler is going stable in Kotlin 2.0" width="100%">
+    </picture>
+  </a>
+</div>
+<div class="kotlin-news-section">
+    <div class="kotlin-news-section__chunk">
+        <a class="kotlin-news-section__item" href="https://kotlinlang.org/docs/roadmap.html" target="_blank">
+          <p class="kto-text kto-text_size_s">
+kotlinlang.org
+          </p>
+          <h3 class="kto-text kto-text_size_m">
+            <span class="kotlin-news-section__title">Updated Kotlin roadmap for 2023</span>&nbsp;<span class="kotlin-news-section__arrow">↗</span>
+          </h3>
+        </a>
+        <a class="kotlin-news-section__item" href="https://blog.jetbrains.com/kotlin/2022/12/shout-out-to-kotlin-multiplatform-mobile-content-creators/" target="_blank">
+          <p class="kto-text kto-text_size_s">
+blog.jetbrains.com
+          </p>
+          <h3 class="kto-text kto-text_size_m">
+            <span class="kotlin-news-section__title">Kotlin Multiplatform Mobile Content Creators</span>&nbsp;<span class="kotlin-news-section__arrow">↗</span>
+          </h3>
+        </a>
+    </div>
+    <div class="kotlin-news-section__chunk">
+        <a class="kotlin-news-section__item" href="https://blog.jetbrains.com/kotlin/2022/12/kotlindl-0-5-has-come-to-android/" target="_blank">
+          <p class="kto-text kto-text_size_s">
+blog.jetbrains.com
+          </p>
+          <h3 class="kto-text kto-text_size_m">
+            <span class="kotlin-news-section__title">KotlinDL 0.5 Has Come to Android!</span>&nbsp;<span class="kotlin-news-section__arrow">↗</span>
+          </h3>
+        </a>
+        <a class="kotlin-news-section__item" href="https://blog.jetbrains.com/kotlin/2023/02/reproducible-kotlin-compiler-artifacts/" target="_blank">
+          <p class="kto-text kto-text_size_s">
+blog.jetbrains.com
+          </p>
+          <h3 class="kto-text kto-text_size_m">
+            <span class="kotlin-news-section__title">Reproducible Kotlin Compiler Artifacts</span>&nbsp;<span class="kotlin-news-section__arrow">↗</span>
+          </h3>
+        </a>
+    </div>
+</div>
+
+<div class="kotlin-news-section__button">
+  <a class="kto-button kto-button_theme_dark kto-button_size_l kto-button_mode_outline" href="https://blog.jetbrains.com/kotlin/" target="_blank">Kotlin blog ↗</a>
+</div>      </div>
+    </section>
+
+<section class="kotlin-code-examples-section kto-overview-section kto-overview-section_mode_dark" id="try-kotlin-examples">
+    <div class="g-layout">
+        <div class="kotlin-overview-code-example-tabs">
+            <div class="kotlin-overview-code-example-tabs__group">
+                <div class="overview-group jScroll" style="cursor: default;">
+                    <div class="tab is_active js-tab" data-tab-id="kotlin-code-example-simple">
+                        <div class="text">Simple</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-object-asynchronous">
+                        <div class="tab-text">Asynchronous</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-oriented">
+                        <div class="tab-text">Object-oriented</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-functional">
+                        <div class="tab-text">Functional</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-tests">
+                        <div class="tab-text">Ideal for tests</div>
+                    </div>
+                </div>
+
+                <button type="button" class="kotlin-code-examples-section__run">Run</button>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example" id="kotlin-code-example-simple">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" data-kotlin-playground-initialized="true" style="display: none;">fun main() {
+    val name = "stranger"        // Declare your first variable
+    println("Hi, $name!")        // ...and use it!
+    print("Current count:")
+    for (i in 0..10) {           // Loop over a range from 0 to 10
+        print(" $i")
+    }
+}</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 12px; left: 20px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 192px; min-width: 642.766px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">main</span>() {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">name</span> <span class="cm-operator">=</span> <span class="cm-string">"stranger"</span>        <span class="cm-comment">// Declare your first variable</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">println</span>(<span class="cm-string">"Hi, $name!"</span>)        <span class="cm-comment">// ...and use it!</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">print</span>(<span class="cm-string">"Current count:"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">for</span> (<span class="cm-variable">i</span> <span class="cm-keyword">in</span> <span class="cm-number">0</span>..<span class="cm-number">10</span>) {           <span class="cm-comment">// Loop over a range from 0 to 10</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">print</span>(<span class="cm-string">" $i"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 192px;"></div><div class="CodeMirror-gutters" style="height: 222px; left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcIBmBXAdgAgLYEMCWaAFAJQbAA6mG1AbjgDYZo5YwYC8G5IAzgC4AnHGgDmMAd2pSpAehkYAIjDD0cAtgE8IKARiR4B%2FDHQF4cAI3oxK0gA6m0fekW4AJPABoMAEmasAhNyk0rLyAHQRwlAYKDxseHyBVNT2BHyE3ADCOuqOGJDofPBBNlJIELqEeBgEGAAMEQCMdaTAIe1yGAAyEBC2GBA04hg4GEKibEgCEFj1GHwQGM2l7amOGSA%2BeCXJGAC%2BlHsgHiB8amJ8AAqqfOUCWAggAFY4dMfgM7Z4VgIAauI8PAQNCPRphAAcYWaID2QA%3D%3D%3D">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-object-asynchronous">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" args="Kotlin" data-kotlin-playground-initialized="true" style="display: none;">import kotlinx.coroutines.*
+
+suspend fun main() {                                // A function that can be suspended and resumed later
+    val start = System.currentTimeMillis()
+    coroutineScope {                                // Create a scope for starting coroutines
+        for (i in 1..10) {
+            launch {                                // Start 10 concurrent tasks
+                delay(3000L - i * 300)              // Pause their execution
+                log(start, "Countdown: $i")
+            }
+        }
+    }
+    // Execution continues when all coroutines in the scope have finished
+    log(start, "Liftoff!")
+}
+
+fun log(start: Long, msg: String) {
+    println("$msg " +
+            "(on ${Thread.currentThread().name}) " +
+            "after ${(System.currentTimeMillis() - start)/1000F}s")
+}</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 12px; left: 20px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 504px; min-width: 1018.45px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-variable">kotlinx</span>.<span class="cm-variable">coroutines</span>.<span class="cm-variable">*</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">suspend</span> <span class="cm-keyword">fun</span> <span class="cm-def">main</span>() {                                <span class="cm-comment">// A function that can be suspended and resumed later</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">start</span> <span class="cm-operator">=</span> <span class="cm-type">System</span>.<span class="cm-variable">currentTimeMillis</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">coroutineScope</span> {                                <span class="cm-comment">// Create a scope for starting coroutines</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">for</span> (<span class="cm-variable">i</span> <span class="cm-keyword">in</span> <span class="cm-number">1</span>..<span class="cm-number">10</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">launch</span> {                                <span class="cm-comment">// Start 10 concurrent tasks</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">                <span class="cm-variable">delay</span>(<span class="cm-number">3000L</span> <span class="cm-operator">-</span> <span class="cm-variable">i</span> <span class="cm-operator">*</span> <span class="cm-number">300</span>)              <span class="cm-comment">// Pause their execution</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">                <span class="cm-variable">log</span>(<span class="cm-variable">start</span>, <span class="cm-string">"Countdown: $i"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">// Execution continues when all coroutines in the scope have finished</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">log</span>(<span class="cm-variable">start</span>, <span class="cm-string">"Liftoff!"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">log</span>(<span class="cm-variable">start</span>: <span class="cm-type">Long</span>, <span class="cm-variable">msg</span>: <span class="cm-type">String</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">println</span>(<span class="cm-string">"$msg "</span> <span class="cm-operator">+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">"(on ${Thread.currentThread().name}) "</span> <span class="cm-operator">+</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-string">"after ${(System.currentTimeMillis() - start)/1000F}s"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 504px;"></div><div class="CodeMirror-gutters" style="height: 534px; left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcICWBbADhATgFwAQGsJsAbJAOwA8A6STCAV23JgGcqAqAHTO5fpbQwyUXADN6ZXCgCG5ABQBKXMFyq16jZq3qA9DtwBBMRLBMIk7AAtpeMNMkAjGLj4ChsEfZGZW9FDBFiGxhMbnUAN2liF2xpHFwAXlwAZQBPFmwYFBp6TB8ybAAVVBgAWSRiUhZFMLVaBiYyGGTIQWVtDs6NPVwAYR9g3GkXVudRLBi4xoBzXHrGZhZazXHMXDkkXHJcAEYqKh2ABiVgZY6gk0t2rpvtHuTY%2BKO58zBc%2FLxYlnwlyVvVWBBVJyADMh3BABlcABaLa4di4MHHf49AAK0n4zisMCQaxgFBgbzMPD%2B%2F2IEGmcgyUwANLhOCBegwClAIAB3MjwXAAEiQDIUZ20AF9BWoRaTcOLdPoAKIEolIcwvArkeisXBsyxCIaVF50BZNFhbCxakYQNrWcJjchIFhaqBncmU6k4OkMiFIUTYCCiUQAQn53HF3HEkidVMe2C5EPM0zpKBY0y5D0w5GmJzOaFTBWIZDkDO5CdmDNwAGpRZoGXIldzgIVLAMoDk8kIig2YNIoIoqGRpP4hUoS%2BWJdoGdIvSEecA5GkMllmx9iv5ypVbYoYZMcAodEdwQAxIVLEACshCkA0kCPaYwbCooLYVYoBAgABW0ki5%2FAEHQFRCADUQhYRUyGfPYAA4DkOEAhSAA%3D">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-oriented">
+                <pre theme="darcula" class="sample" auto-indent="false" folded-button="false" data-min-compiler-version="1.5" data-kotlin-playground-initialized="true" style="display: none;">abstract class Person(val name: String) {
+    abstract fun greet()
+}
+
+interface FoodConsumer {
+    fun eat()
+    fun pay(amount: Int) = println("Delicious! Here's $amount bucks!")
+}
+
+class RestaurantCustomer(name: String, val dish: String) : Person(name), FoodConsumer {
+    fun order() = println("$dish, please!")
+    override fun eat() = println("*Eats $dish*")
+    override fun greet() = println("It's me, $name.")
+}
+
+fun main() {
+    val sam = RestaurantCustomer("Sam", "Mixed salad")
+    sam.greet() // An implementation of an abstract function
+    sam.order() // A member function
+    sam.eat()   // An implementation of an interface function
+    sam.pay(10) // A default implementation in an interface
+}</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 12px; left: 20px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 528px; min-width: 845.055px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">abstract</span> <span class="cm-keyword">class</span> <span class="cm-def">Person</span>(<span class="cm-keyword">val</span> <span class="cm-def">name</span>: <span class="cm-type">String</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">abstract</span> <span class="cm-keyword">fun</span> <span class="cm-def">greet</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">interface</span> <span class="cm-def">FoodConsumer</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">fun</span> <span class="cm-def">eat</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">fun</span> <span class="cm-def">pay</span>(<span class="cm-variable">amount</span>: <span class="cm-type">Int</span>) <span class="cm-operator">=</span> <span class="cm-variable">println</span>(<span class="cm-string">"Delicious! Here's $amount bucks!"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">RestaurantCustomer</span>(<span class="cm-variable">name</span>: <span class="cm-type">String</span>, <span class="cm-keyword">val</span> <span class="cm-def">dish</span>: <span class="cm-type">String</span>) : <span class="cm-variable">Person</span>(<span class="cm-variable">name</span>), <span class="cm-variable">FoodConsumer</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">fun</span> <span class="cm-def">order</span>() <span class="cm-operator">=</span> <span class="cm-variable">println</span>(<span class="cm-string">"$dish, please!"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">override</span> <span class="cm-keyword">fun</span> <span class="cm-def">eat</span>() <span class="cm-operator">=</span> <span class="cm-variable">println</span>(<span class="cm-string">"*Eats $dish*"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">override</span> <span class="cm-keyword">fun</span> <span class="cm-def">greet</span>() <span class="cm-operator">=</span> <span class="cm-variable">println</span>(<span class="cm-string">"It's me, $name."</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">main</span>() {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">sam</span> <span class="cm-operator">=</span> <span class="cm-variable">RestaurantCustomer</span>(<span class="cm-string">"Sam"</span>, <span class="cm-string">"Mixed salad"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">sam</span>.<span class="cm-variable">greet</span>() <span class="cm-comment">// An implementation of an abstract function</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">sam</span>.<span class="cm-variable">order</span>() <span class="cm-comment">// A member function</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">sam</span>.<span class="cm-variable">eat</span>()   <span class="cm-comment">// An implementation of an interface function</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">sam</span>.<span class="cm-variable">pay</span>(<span class="cm-number">10</span>) <span class="cm-comment">// A default implementation in an interface</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 528px;"></div><div class="CodeMirror-gutters" style="height: 558px; left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcICGAjAzgFwE5LBgBGADZJpr4AKMWaEAdgBQBuSR%2BdSAtjPPgMrYAlnQDmASnzAAOnXxz8qTDjz4AZgFdZIrDBgYGYmQF8ZM4RmqrcMfADEI0AML0067lkkz5azfhhJ9Q1l5DVkAByQATwYuCE0MXgBJOgwJAF58MKxzIkYpEAARGCJBMEE4tABCfAAJahgAcnIAElj4%2FBR1MABrKvygkzoZYlJyACUYTCR1HBTHdUwIdwYObl4BbNEAGnwWNihBNAALdaFRCV4qGnoVrhgxHfsnFzdqT2C5UPwILFgsA3wGSyOTyIGaB2OOzCRH8aBglX6XnkECY1GysB8sn8gUBmU2GFyDHyACoAKIBFoQo7ExEfb6orDomxfbS6HFA%2FGE%2FKJDBNfDcHbNVYwAB0tMGMi%2BnCQwgB0jpe3waC4uImUxmSDmCwwS2oRJAfC4%2BR2%2BQAsoIAB4wKBK1hIKC07zKzgi1l6AEAeg9%2BAAgrJBJxoTBuCkAuVZBBVApZIpsLgCKE8OGkXJnSKfn9Pd6ffzgyg3omMMm6WnsQC5F7ff7AzCQxgw%2FRvlHNfhzJZrJik%2FQU7aXRFogBGAAMEkrOdgVnURAIAaDdYb%2Fpji4sWCsYBgxhAWxA9awIj0FBIGFUP04CBAACskCwt%2BAlmFBDCsAA1ahocPngcigAcIuHICMIA">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-functional">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" data-kotlin-playground-initialized="true" style="display: none;">fun main() {
+    // Who sent the most messages?
+    val frequentSender = messages
+        .groupBy(Message::sender)
+        .maxByOrNull { (_, messages) -&gt; messages.size }
+        ?.key                                                 // Get their names
+    println(frequentSender) // [Ma]
+
+    // Who are the senders?
+    val senders = messages
+        .asSequence()                                         // Make operations lazy (for a long call chain)
+        .filter { it.body.isNotBlank() &amp;&amp; !it.isRead }        // Use lambdas...
+        .map(Message::sender)                                 // ...or member references
+        .distinct()
+        .sorted()
+        .toList()                                             // Convert sequence back to a list to get a result
+    println(senders) // [Adam, Ma]
+}
+
+data class Message(                                           // Create a data class
+    val sender: String,
+    val body: String,
+    val isRead: Boolean = false,                              // Provide a default value for the argument
+)
+
+val messages = listOf(                                        // Create a list
+    Message("Ma", "Hey! Where are you?"),
+    Message("Adam", "Everything going according to plan today?"),
+    Message("Ma", "Please reply. I've lost you!"),
+)</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 12px; left: 20px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 720px; min-width: 1085.88px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">main</span>() {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">// Who sent the most messages?</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">frequentSender</span> <span class="cm-operator">=</span> <span class="cm-variable">messages</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">groupBy</span>(<span class="cm-variable">Message</span>::<span class="cm-variable">sender</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">maxByOrNull</span> { (<span class="cm-variable">_</span>, <span class="cm-variable">messages</span>) <span class="cm-operator">-&gt;</span> <span class="cm-variable">messages</span>.<span class="cm-variable">size</span> }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-operator">?</span>.<span class="cm-variable">key</span>                                                 <span class="cm-comment">// Get their names</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">println</span>(<span class="cm-variable">frequentSender</span>) <span class="cm-comment">// [Ma]</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-comment">// Who are the senders?</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">senders</span> <span class="cm-operator">=</span> <span class="cm-variable">messages</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">asSequence</span>()                                         <span class="cm-comment">// Make operations lazy (for a long call chain)</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">filter</span> { <span class="cm-variable">it</span>.<span class="cm-variable">body</span>.<span class="cm-variable">isNotBlank</span>() <span class="cm-operator">&amp;&amp;</span> <span class="cm-operator">!</span><span class="cm-variable">it</span>.<span class="cm-variable">isRead</span> }        <span class="cm-comment">// Use lambdas...</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">map</span>(<span class="cm-variable">Message</span>::<span class="cm-variable">sender</span>)                                 <span class="cm-comment">// ...or member references</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">distinct</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">sorted</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        .<span class="cm-variable">toList</span>()                                             <span class="cm-comment">// Convert sequence back to a list to get a result</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">println</span>(<span class="cm-variable">senders</span>) <span class="cm-comment">// [Adam, Ma]</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">data</span> <span class="cm-keyword">class</span> <span class="cm-def">Message</span>(                                           <span class="cm-comment">// Create a data class</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">sender</span>: <span class="cm-type">String</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">body</span>: <span class="cm-type">String</span>,</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">val</span> <span class="cm-def">isRead</span>: <span class="cm-type">Boolean</span> <span class="cm-operator">=</span> <span class="cm-atom">false</span>,                              <span class="cm-comment">// Provide a default value for the argument</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">val</span> <span class="cm-def">messages</span> <span class="cm-operator">=</span> <span class="cm-variable">listOf</span>(                                        <span class="cm-comment">// Create a list</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">Message</span>(<span class="cm-string">"Ma"</span>, <span class="cm-string">"Hey! Where are you?"</span>),</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">Message</span>(<span class="cm-string">"Adam"</span>, <span class="cm-string">"Everything going according to plan today?"</span>),</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-variable">Message</span>(<span class="cm-string">"Ma"</span>, <span class="cm-string">"Please reply. I've lost you!"</span>),</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">)</span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 720px;"></div><div class="CodeMirror-gutters" style="height: 750px; left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcIBmBXAdgAgLYEMCWaAFAJQbAA6mG1A9DRgOoAWEGAzjGgC4ZdMzYIbHlhhs2OAOZiA%2FJWrUAbjgA2GJACcYARxScuAZU6wNGALzYxE6W3kL7AOkkaIKAA4AhAJ6EAslakYeHgONBNiO3tqB1wAD28AeQ0AORQVNWAMQgB9ABpLcUC2UgBaAD4C6zEHNjwALwEAX0iomQcAaxgvKJ7evv6B%2BzoMAHEYHj4YPFM0HFFbKmo3DQIuFSJNHT1uIzCYDVJhgG1fHABdShbh5lYcLV5%2BdmN9tjlFjGU1UJM2c0qilqOHBsIy6ThgGAkQbQmFRYanToYCBufY4Lh4CBoX4qHB1bqEJAQUw4DAqTGSDBgVRqMBMfBoCLvRxIPAqLj7MgYPBcBwAI2gXgceDYyQgXA8OLQ7ShADIZRgAITcoVsABKMBwUAwjT6wwAqhxSXNeVBgQ5zYCFDEcG4%2FAFpMFvvtSLDXQphuaHETLFheRytEh9uCxJbolBhei0GAuCRQxgakT2VBY0yrVwIAAZCNQt25wbDADCmMU%2Bx4HDBUYEvJwYHavFupIj9Yw0h4JK0bDSXBay1W60ITo0xQwxwAgqasPlThc0M00JRTVwSWAceIMP5CtJCHmdz1C1o0QISYvl6uFvZPk89hp4BgDFwVmhJLkWpf%2BVAvLf74%2Fn6%2FVFy1Q1KBbw8CAIBUDVMAsJBVA4fJd36YYAAUXEUPBYAwY8YBgrsPlUPR1G9SZMI0SQUFEbhKEZShL3mKpfgsFQIwSJBtwQvN9w1dlMMbYQWg3KpCHIEBTmE%2FJhIACS6BVGH4e47gELxXDkEBiBfd4BMCISQHHOYxIwYSAFESw0Lw%2BAIClJAgCzMLASANHDJ9mzcSV61NLwVLU%2Fj7UhYTRJAcSQCQiDgQELQXMFDAAEkAHIS1JIQeCUlAFWEryGQCkAl1I8ZgrRQkNCwBAQAAKxwZRMsgLA3FZfYADUXgxNBioARgcAAOBwWoABhARogA">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-tests">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" data-target-platform="junit" data-kotlin-playground-initialized="true" style="display: none;">// Tests
+// The following example works for JVM only
+import org.junit.Test
+import kotlin.test.*
+
+class SampleTest {
+    @Test
+    fun `test sum`() {                  // Write test names with whitespaces in backticks
+        val a = 1
+        val b = 41
+        assertEquals(42, sum(a, b), "Wrong result for sum($a, $b)")
+    }
+
+    @Test
+    fun `test computation`() {
+        assertTrue("Computation failed") {
+            setup()                     // Use lambda returning the test subject
+            compute()
+        }
+    }
+}
+
+// Sources
+fun sum(a: Int, b: Int) = a + b
+fun setup() {}
+fun compute() = true</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 12px; left: 20px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: none;"><div></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 16px; margin-bottom: 0px; border-right-width: 30px; min-height: 624px; min-width: 864.32px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 24px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Tests</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// The following example works for JVM only</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-variable">org</span>.<span class="cm-variable">junit</span>.<span class="cm-variable">Test</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">import</span> <span class="cm-variable">kotlin</span>.<span class="cm-variable">test</span>.<span class="cm-variable">*</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">SampleTest</span> {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-meta">@Test</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">fun</span> <span class="cm-def">`test</span> <span class="cm-def">sum`</span>() {                  <span class="cm-comment">// Write test names with whitespaces in backticks</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">val</span> <span class="cm-def">a</span> <span class="cm-operator">=</span> <span class="cm-number">1</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-keyword">val</span> <span class="cm-def">b</span> <span class="cm-operator">=</span> <span class="cm-number">41</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">assertEquals</span>(<span class="cm-number">42</span>, <span class="cm-variable">sum</span>(<span class="cm-variable">a</span>, <span class="cm-variable">b</span>), <span class="cm-string">"Wrong result for sum($a, $b)"</span>)</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-meta">@Test</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">fun</span> <span class="cm-def">`test</span> <span class="cm-def">computation`</span>() {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        <span class="cm-variable">assertTrue</span>(<span class="cm-string">"Computation failed"</span>) {</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">setup</span>()                     <span class="cm-comment">// Use lambda returning the test subject</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">            <span class="cm-variable">compute</span>()</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">        }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    }</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Sources</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">sum</span>(<span class="cm-variable">a</span>: <span class="cm-type">Int</span>, <span class="cm-variable">b</span>: <span class="cm-type">Int</span>) <span class="cm-operator">=</span> <span class="cm-variable">a</span> <span class="cm-operator">+</span> <span class="cm-variable">b</span></span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">setup</span>() {}</span></pre><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">fun</span> <span class="cm-def">compute</span>() <span class="cm-operator">=</span> <span class="cm-atom">true</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 624px;"></div><div class="CodeMirror-gutters" style="height: 654px; left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcID0SAEAVGBnALlgOgHYoYAWMqAZhADY0QDuAloQOaowAeAhgLYAONCgwgAnANZYqY1ACkAagFlUEQjQCeRJgLE4Vo1gDoAVgFdCTHIcy4tO0XvEQcNFoZzYrAKiJEwNbiwpAGU%2BQRgbPWAiVFjUAAFImLjKc1QAAw9cVCxTXnSACgBKVGA48orKkgB1UUsKLL1CPmxUZhxSNtJ6rH5uMFaWVAAjfvEcJjBJZMqAN24aVG5UAF5UAEYZivnF4dXUABZNwkrYwKwYBwBRAEdTBawCg4AmABocvILud%2BGi9%2FwQLVVOxRNhTDQ9NRRB9eAUACTfVBw34AopbAC%2BvhOcUSni2qROmU8qEgAlMOG4E1UhRK0WxlXOlxw6FEphgBQBAGEIGSKVSTpRuEwhFBUaUtqccjAcKZ%2BMVJQryiQAKoXVABXjDKDLUEy0QWNioDoNYm5YbGGBgHAS06k%2Fjk9lo%2BkVTHO12uogkYIQUyiAYEQgEmFfeCoACShBwP1DEZwJTWywA1CMiEGLjK5bTXUG7Q75WscKy4K8QBSDNKAAoBHBQ3gIEBmCw4EAlu3Cy7yS5YJiqevrQwADkM6wADCB0UA">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JUnit</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+          <a href="https://kotlinlang.org/docs/getting-started.html" class="kto-button kto-button_theme_dark kto-button_size_l kto-button_mode_outline kotlin-overview-code-example-tabs__button _get-started-button">Get started ↗</a>
+        </div>
+    </div>
+</section><section class="kotlin-code-examples-section kto-overview-section kto-overview-section_mode_dark" id="kotlin-values-examples">
+    <div class="g-layout">
+        <div class="kotlin-overview-code-example-tabs">
+            <div class="kotlin-overview-code-example-tabs__group">
+                <div class="overview-group jScroll" style="cursor: default;">
+                    <div class="tab is_active js-tab" data-tab-id="kotlin-code-example-concise">
+                        <div class="text">Concise</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-safe">
+                        <div class="tab-text">Safe</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-expressive">
+                        <div class="tab-text">Expressive</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-simplifies-concurrency">
+                      <div class="tab-text">Asynchronous</div>
+                    </div>
+                    <div class="tab js-tab" data-tab-id="kotlin-code-example-interoperable">
+                        <div class="tab-text">Interoperable</div>
+                    </div>
+                </div>
+
+                <button type="button" class="kotlin-code-examples-section__run">Run</button>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example" id="kotlin-code-example-concise">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" data-kotlin-playground-initialized="true" style="display: none;">// More than 30% fewer lines of code compared to Java
+// (based on the experience of Duolingo and other companies)
+
+data class Book (
+    val title: String,                         // + automatically generated equals(),
+    val year: Int                              // hashCode(), toString(), and copy()
+)
+fun century(year: Int) = (year - 1) / 100 + 1  // Top-level function,
+                                               // single-expression body
+fun main() {
+    val books = listOf(                        // Construct a list
+        Book("Don Quixote", 1605),             // No `new` keyword
+        Book("The Lord of the Rings", 1955)
+    )
+    val classics = books.filter { century(it.year) &lt; 20 } // Trailing single-argument lambda
+    println("Classic books: $classics")                   // Calls toString() for Book
+}</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none; right: 6px; left: 0px;"><div style="width: 10px; left: 0px;"></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 6px; width: 6px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 6px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// More than 30% fewer lines of code compared to Java</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcID0SAEBZCAnGqAuAFgIYB2qAzAAwCkqAZjAO4xaoA2AliTAM6oR1UkWEIgBbAA5EcUfBFQApIgDciAHRIpUACgBGRHjFkQyhXDAAeElhxgkwuAagAiAVwicSAc3mljZ1khJUlseAEoNDSgiPCIhNgM%2BACEICABrHQ1UbNRVNnwOPDYYeFQAZTwsLi8AGhz6hsamrQBqVCJXPHEYjjAiNjYAT1QvOxYYo1QYAEdXfp5tMJqsnLzUQZhpUoBJEjwmg8PGrWIeAgBhaBhFuq6Kqu8b9pJZSAlBxY0IkjpXMgc9q4sB8NltULs8GFUABeHSg1gAWlQAEYoWhkZRKKg2sjsloACoQCQI4rKGD5X72PAcEzLMhHBmMplaHjVYoIywSHA8VkmVC6aCDDSU1BiIhcRaoYArbJrAXpPiwzg8PAAeTo2iZDK0lxIKqwrjA%2BziyrwMoaKXS2jUIGcfIAiq4OBYIHgYDa6siAGyUACsS2ZaAAcvIAAbcRih1BpGCDRjYKDm%2BqWtLWkD4gi4AAyCf4gjMqAAStUeB6UQBOX3%2B83feprMAJHm9RX81JpHgAOjoHDYbtYwCEdjwQI%2BhQ78KhAB5UAAmLEAX1QBKw4s8XlQrO87OkXlcYiH7CIYl00XNXK4RRIafOjdZYFbCtKABIG4lmzaoVr6jr%2Bmw%2BHdKmqSU6GwVAUw0ecQBqEBYiwUY8AABQSPAQKwMQEBAAArFQiCg8BxAkHsWAANRYXkSAw5EOwADg7DEQHnIA%3D">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-safe">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" args="Kotlin" data-kotlin-playground-initialized="true" style="display: none;">// Apps built with Kotlin are 20% less likely to crash
+// (based on Google's internal data)
+
+fun printMessagesUppercased(messages: List&lt;String?&gt;) { // List elements can be nulls
+    // messages.add(Message("Java"))                   // ERROR: List is read-only
+    messages.onEachIndexed { index, msg -&gt;
+        print("\nMessage #$index: ")
+        // print(msg.uppercase())                      // ERROR: `msg` can be null
+        msg?.let {                                     // Print only if `msg` is not null
+            print(it.uppercase())                      // OK, `it` is String
+        }
+    }
+}
+fun main() {
+    val messages = mutableListOf("hello", null, "world")
+    // messages = mutableListOf("!!!")                 // ERROR: can't reassign a value
+    messages.add("Kotlin")                             // OK: the list is mutable
+    printMessagesUppercased(messages)                  // Pass the list as read-only
+}</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none; right: 6px; left: 0px;"><div style="width: 10px; left: 0px;"></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 6px; width: 6px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 6px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Apps built with Kotlin are 20% less likely to crash</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcID0SAEBBADpgzqgRgK4CWANgC6oDux5AFqgNITmnEB2qAhgE4yoAmAAwBSVKRg48bANYxSAT1TkIqMDy446AHXYpUACnyaYUVBE4BxCBADmEgOR4O5GD3ZdSqKF3JcAlLq6AGaEnJg8LgCykjhctpIAqthuYCZQBgC2sfGS8KgAMsQ45AA8AMrkkey2APwAfP6owKj6RSWo8jDZ7OR4aZz4%2FOyEpKQ4uqhTrWjZUrk4AHRcUBkx8wkG2iAAUlwAblzb%2Fk3TZ%2BcX%2BgCiAEo3API3%2Be2Uxah8KwC0FoqT03NxBJLCxXLhgOgASXYsAAHqZmqgOLCADSoTI4WyoT71P4XCIuLYgbS6daA%2FgAYgAJEiYDD8sdced9PjelkMYtCCkeGkcDADCcLoKhTNULcHk9UAADdG2SVqLiDYajUiMs4y2qLCSUFrC3V6y5oAAK1UoPyUxGCUplcre7BYqBGY1VgpZ5AMtA5XJ5fIF%2BuF%2BnujFRktoNrwlWqtmdUwAvoy4%2BwE6FOJkuBx%2Bc1GYcvACFqgALxowh%2BfASF73YKEujyUgQbaox2kVHbKgQHikKAMzjTfS5oEFoslsvFcgVwkAQknxz9Z2ud0e%2BQGDkoHykxFsnC4qGzhBgjL7kmWq0JzFYHGnM5nAcY%2BXo%2FDYHTemWLXFLe%2B7U1dpIWyUwqXSWQ5ECpyXiKhqaHgd7iCO3B4B8UDfOwvyJiAyIgH4PAJOQhqkL4wRtpkCAgAAVgcXCoeAECZJgZBuAAam4ODEBYREAIyLAAHIsrFCCAMZAA">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-expressive">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" data-kotlin-playground-initialized="true" style="display: none;">import kotlin.math.absoluteValue
+
+fun main() {
+//sampleStart
+    val dates = listOf(1 to "January", 13 to "May", 22 to "September", 23 to "December")
+    dates.forEach { (day, month) -&gt;                 // Traverse a list of pairs with a trailing lambda
+        println("${day.ordinal()} of $month")       // Use the Int.ordinal() extension function
+    }
+    createEmptyWindow()
+        .apply {                                    // Configure properties of an object
+            width = 300
+            height = 200
+            isVisible = true
+        }.also { w -&gt;                               // Perform an additional operation on a call chain
+            showWindow(w)
+        }
+    issueById["13456"]
+        ?.takeIf { it.status == Status.FIXED }      // Use the value only if the condition is true
+        ?.let {                                     // Do something only if the value is not null
+            println("We've fixed this: $it")
+        }
+//sampleEnd
+}
+
+// Extension function
+fun Int.ordinal() = this.absoluteValue.let { iAbs -&gt;
+    val suffix = if (iAbs % 100 in 11..13) "th" else
+        when (iAbs % 10) {
+            1 -&gt; "st"
+            2 -&gt; "nd"
+            3 -&gt; "rd"
+            else -&gt; "th"
+        }
+    "$this$suffix"
+}
+data class Window(var width: Int, var height: Int, var isVisible: Boolean)
+fun createEmptyWindow() = Window(0, 0, false)
+fun showWindow(window: Window) {
+    println("Showing $window")
+}
+enum class Status { OPEN, FIXED, IN_PROGRESS }
+data class Issue(val status: Status)
+val issueById = mutableMapOf(
+    "13456" to Issue(Status.FIXED)
+)</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><div class="fold-button  darcula"></div><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none; right: 6px; left: 0px;"><div style="width: 10px; left: 0px;"></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 6px; width: 6px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 6px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable">dates</span>.<span class="cm-variable">forEach</span> { (<span class="cm-variable">day</span>, <span class="cm-variable">month</span>) <span class="cm-operator">-&gt;</span>                 <span class="cm-comment">// Traverse a list of pairs with a trailing lambda</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcICWBbADhATgFwAQGsJsAbJAOwDoUBDbACwuoCMBnCYgV2xgDVrOYAHTLCAZhzK4a5ABQBKXMGHDcq3ADd%2BuKLRgtcAXlykW2APKiZARlzYIuQSABS1Mh2qYAno4A0uKwDMtvaOALLU3iB%2BAEzRwQ4gAMowaNwoTDCYvrjRQXYJACIwYDDpmY5yKmo63CwUolgAotRgdIq4MjqefigQZPQKALQAfGpj4%2BMA9JO4ACqY1OqZLDC41MZIprgQorho1EiY%2BgDuSPRrtgtIpGQA5sbU6TpVE2iY5CRkMo4AJMBdFCwUHI%2FHkAF9trsfr1%2BnQKhNcNNcABVFa2OirACS%2FUBmGBZFBChgAA9uGQWEg%2BrhxGQwNhKSJJGowS9cGBMDBdI10NhPAB1chQCDHeSssaMNBoYiedoIuXyhWImYAYT6oiQtw4HL2mAgaEy9L0kLWkggTAAVsVsGKEacoOcjAEAAxOm0TDEauh4IzRF1u8abHibJBMYirIzYTAcIRMiZgxjENjtY64EaK9NypEABUyDUwKBNaygwPpfS0esytAZ20k6zA%2FGIbLoB0Z6ZYdGFArIQpFx0qsfGLIHmxY0YAQp5MVAANqOQIAFgArAA2RwAXX9AH4KNhqPgYJjdsBcGcKKZaBx9AYjIld9hLxQAGKYgAajQKuAhUxmqNW9FWmgCDW0onrs%2F5sn0JbVpslzRluFBhngx4Zih8pIgU9hsCgMD0OQ9x9CBSBgRiGj8NGJ76GQRC4G4xDEP6YxvB8xBfI4fIwAA5Es1JIMSMBQOimzwLgPxnBU%2FpDsIklkEijSkjA5LVjSdIMmIEi4Ni2C4vihKGIJdTMGwnDcHwAgITh7RIAAgqwqbDKygG4KOojqsSelER01m2QApP4LonpIVhWBQFCBAojj0I4uAwImMZyscGKSDIXn6L5VhOgoSgDnKNhpo4piOAxahxHlIDdoV2UIkEpV4hV6YxWipWRSAEmsr8uEsD8zmuRVQ41HWxDUCw%2Bhdj2MiaJguB2vQwmaX4E24B6txerN%2FTzR4FFBhSoYwMJY4QOwnJkP2NJshyXI8vygrCvIemjTdTp%2BI91L8CsJ3qe2nbXb233CfdfaKKyTH9Cx3xJB2px3CJkM9uJZBDgpHAFmAg3Dbgt4Xvox5mFmjQAHJ%2BM%2Bb4FH4mJ4wA%2BlmABKZgAOJU40iSJJ%2Bwj9WyqP6Jiw3RuNWjnveLDCRjAv9o5I7jpOAlGCgXDMGG4RoBY3wDnOARLquIDxFzo4wDIwsPkT779nIUQgLumC3DhWaDdgeYoAgIDmos1Cm5A6DXJkPDLAyDvBQAHKFTogGCQA%3D">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+            </div>
+
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-simplifies-concurrency">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" data-kotlin-playground-initialized="true" style="display: none;">import kotlinx.coroutines.*
+import kotlinx.coroutines.flow.*
+
+//sampleStart
+// More than 50% of professional developers who use coroutines
+// report increased productivity
+// (based on Google's internal data)
+
+fun main() = runBlocking {
+    val start = System.currentTimeMillis()
+    coroutineScope {                                 // Create a scope for coroutines
+        val waitingJob = launch {                    // Launching a coroutine
+            waiting(start, 150)
+        }
+        countdownSignals(10, 300).collect { value -&gt; // Collecting flow elements
+            log(start, "Countdown: $value")
+        }
+        waitingJob.cancel()                          // Cancelling a coroutine
+    }
+    log(start, "Liftoff!")                           // Execution continues when all
+}                                                    // coroutines have finished
+//sampleEnd
+fun countdownSignals(n: Int, delayMillis: Long): Flow&lt;Int&gt; = flow { // Flow builder
+    for (i in (1..n).reversed()) {
+        delay(delayMillis)                           // Delay in emitting signals
+        emit(i)                                      // Emit the flow element
+    }
+}
+
+// A function that can be suspended and resumed later
+suspend fun waiting(start: Long, delayMillis: Long) {
+    while (currentCoroutineContext().isActive) {     // Check coroutine's context
+        log(start, "Waiting...")
+        delay(delayMillis)                           // Waiting concurrently
+    }
+}
+
+fun log(start: Long, msg: String) {
+    println("$msg after ${(System.currentTimeMillis() - start)/1000F}s")
+}</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><div class="run-button " data-track-run-id=""></div><!--if--><div class="code-area _folded"><div class="fold-button  darcula"></div><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none; right: 6px; left: 0px;"><div style="width: 10px; left: 0px;"></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 6px; width: 6px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 6px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// More than 50% of professional developers who use coroutines</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><div class="compiler-info compiler-info_crosslink" data-nosnippet=""><div class="compiler-info__open-editor"><a class="compiler-info__open-editor-link" target="_blank" rel="noopener noreferrer" href="https://play.kotlinlang.org/editor/v1/N4Igxg9gJgpiBcICWBbADhATgFwAQGsJsAbJAOwA8A6STCAV23JgGcqAqAHTNQxwKKlKNLAyZlWVAGbEIAdw7clZAPQrcAWSwxc2ABYBDMrgCsABgCkuCFNxo6U1iyQQyB4rlgA3GLLQxMFlw5PQhcehYdWjFmFm41XEwYPjxyMCSDSKg7Oih6MCYvJGwAT3j1AAoAI0yYbNdcAHEICABzYhgAciDybAC3DygDbAMASmUpemMUA3IK0dwAXkSpgCFZMHxyVtxgblwD3C93XBYR%2FmWAZRKzmBQaekwksmwAFVQYDSRiUhZ5%2FcO0UYzEukH8u0OkKh0JhsISAGEMn1cAZTmCdFIsLggeJWADoccPHJZuJWgApCBVJa4YgGKZgPQQ2HMg4JAAydLIDO2KOxomBEnxzOJxW2FTOBhwABpcABGczjYwwgC%2BQshkCm2Cg8jIlyQrQGf1lZhlAGYzGZRiIfjAChDCfQdABaAB8uAREBtBR5MnkuF8dxgLziSpZsla4vO2BlnBA8IYL21cjI8FwABIHTBY4rYarQ1CRaSKVUaEYwL55iyq1CEWXfEIdqiccwhXnIeHI5Lo7hY2ykFJsDYpABCbPV8es9QAUQotuBDUgL3IjqCISDKJ%2B3GVE53u5hCWbEiChh8uCk5CQLD0dQmUz5mqTuv1hoqKdwAEkXjLYLSSl8fpeqZsq4rSjKmABishyAAPJ%2B2BussvpyBCCSQX6VT0N8sCYEKmKYLgFRILg5AEbKVBUGQVpJD4gR1PMCx7PmkI%2FgYJQVCxf7fL8Cx7syCQACK%2BKxxHGHcxSkqcz7uCGsJidghE8bxvEJFOKDFLo15nlB%2FodCgQbYK2W7KAkACCZ70kwDT6MM2JGLgVQ6CwET%2BGQsDZEY2RJE5enZLSfQ4WQTksC52STMYhZihKOBASB35CZxAEsDFZCgbsQohN8OgVGAjzPNg8Z0AKMDxi8MAUPJVqXiZ3o%2BAxNbqPC16bHyhW4t0fKleVaqHB2UXdrGADqJLbORVDZt1Bwcex8X%2FtxSlwuoQ2iilHU5U8%2BnEGU%2BZ5nm3BhTSbSdtFuDASlMooCwrSppc2CYNsDFCvYvTEGQFSxmmF2NgOATpsAFTXLc9xrXl7x6bNl6Vk6pxRqMKjGha4HKnEICKsqIBSiA5ytDA2AAAp%2BXhKAICAABWBjHOj4AQOgmWYAAagEziuMTZEABxUMaIDKkAA%3D%3D">Open&nbsp;in&nbsp;Playground&nbsp;→</a></div><!--if--><span class="compiler-info__target">Target: JVM</span><span class="compiler-info__version">Running on v.1.8.10</span></div><!--if--><!--if--></div></div>
+          </div>
+
+            <!-- code example -->
+            <div class="kotlin-overview-code-example is_hidden" id="kotlin-code-example-interoperable">
+                <pre theme="darcula" class="sample" auto-indent="false" data-min-compiler-version="1.5" data-highlight-only="1" data-kotlin-playground-initialized="true" style="display: none;">// Use any existing JVM library or framework
+// Call Kotlin code from Java without an issue
+
+@SpringBootApplication
+class DemoApplication
+
+fun main(args: Array&lt;String&gt;) {
+    runApplication&lt;DemoApplication&gt;(*args)
+}
+
+@RestController
+class MessageResource {
+    @GetMapping
+    fun index(): List&lt;Message&gt; = listOf(
+        Message("1", "Hello!"),
+        Message("2", "Bonjour!"),
+        Message("3", "Privet!"),
+    )
+}
+
+data class Message(val id: String?, val text: String)</pre><div><div class="executable-fragment-wrapper theme-darcula-wrapper"><div class="executable-fragment darcula"><!--if--><div class="code-area _folded"><!--if--><textarea style="display: none;"></textarea><div class="CodeMirror cm-s-darcula CodeMirror-overlayscroll"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 0px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-overlayscroll-horizontal" cm-not-content="true" style="display: none; right: 6px; left: 0px;"><div style="width: 10px; left: 0px;"></div></div><div class="CodeMirror-overlayscroll-vertical" cm-not-content="true" style="display: block; bottom: 0px;"><div style="height: 10px; top: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="height: 6px; width: 6px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-width: 3px; padding-right: 6px; padding-bottom: 0px;"><div style="position: relative;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"><pre class="CodeMirror-line" role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Use any existing JVM library or framework</span></span></pre></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"></div><div class="CodeMirror-code" role="presentation"></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent;"></div><div class="CodeMirror-gutters" style="left: 0px;"><div class="CodeMirror-gutter errors-and-warnings-gutter"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div><div class="js-code-output-executor darcula"><!--if--><!--if--></div></div><!--if--><!--if--></div></div>
+            </div>
+
+          <a href="https://kotlinlang.org/docs/getting-started.html" class="kto-button kto-button_theme_dark kto-button_size_l kto-button_mode_outline kotlin-overview-code-example-tabs__button">Get started ↗</a>
+        </div>
+    </div>
+</section>
+
+<article class="kto-overview-section kotlin-why-section">
+    <div class="g-layout">
+        <section class="kotlin-why-section__section">
+            <h3 class="kto-heading kto-heading_size_h1">Cross-platform layer for native applications</h3>
+
+            <p class="kto-text kto-text_size_m">
+                Share application logic between web, mobile, and desktop platforms while keeping an experience native to users.<br><br>
+                Save time and get the benefit of unlimited access to features specific to these platforms.
+            </p>
+
+            <p></p>
+
+            <div class="kotlin-why-section__section-content">
+                <img class="kotlin-why-section__media kotlin-why-section__media_type_why" alt="Mobile platforms Feature" src="../../../../../Kotlin%20Programming%20Language_files/multiplatform.svg" width="100%">
+            </div>
+
+            <a class="kto-button kto-button_size_l kto-button_mode_outline" href="https://kotlinlang.org/docs/multiplatform.html">
+                <span class="kotlin-why-section__button-text-xs">Learn about Kotlin Multiplatform →</span>
+                <span class="kotlin-why-section__button-text-xxs">Learn more →</span>
+            </a>
+        </section>
+
+        <section class="kotlin-why-section__section">
+            <h3 class="kto-heading kto-heading_size_h1">Big, friendly and helpful <br>community</h3>
+
+            <p class="kto-text kto-text_size_m">
+                Kotlin has great support and many contributors in&nbsp;its fast-growing global community. Enjoy the benefits of&nbsp;a&nbsp;rich ecosystem with a&nbsp;wide range of&nbsp;community libraries. Help is&nbsp;never far away&nbsp;— consult extensive community resources or&nbsp;ask the Kotlin team directly.
+            </p>
+
+            <div class="kotlin-why-section__section-content">
+                <div class="kto-overview-youtube kotlin-why-section__media">
+                    <iframe width="560" height="315" frameborder="0" allowfullscreen="" src="../../../../../Kotlin%20Programming%20Language_files/JGvk4M0Rfxo.html" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" data-gtm-yt-inspected-58776_780="true" id="566519244" title="Welcome to the Kotlin YouTube Channel!" data-gtm-yt-inspected-13="true"></iframe>
+                </div>
+            </div>
+
+            <a class="kto-button kto-button_size_l kto-button_mode_outline" href="https://kotlinlang.org/community/">
+                Join the community →
+            </a>
+        </section>
+    </div>
+</article>
+    <section id="usage-highlights" class="kto-overview-section kotlin-highlights-section">
+        <div class="g-layout">
+            <h2 class="kotlin-highlights-section__title kto-heading kto-heading_size_hero">
+                <a class="kto-anchor-link kto-anchor-link--hover-white" href="https://kotlinlang.org/#usage-highlights">Kotlin Usage Highlights</a>
+            </h2>
+            <div class="kto-highlights">
+                    <a class="kto-highlights-item kto-highlights-item_company_gradle" href="https://blog.gradle.org/kotlin-meets-gradle" target="_blank">
+                        <h3 class="kto-highlights-item__header">Gradle</h3>
+                        <div class="kto-highlights-item__text">Gradle is introducing Kotlin as a language for writing build scripts</div>
+                    </a>
+                    <a class="kto-highlights-item kto-highlights-item_company_corda" href="https://www.corda.net/2017/01/10/kotlin/" target="_blank">
+                        <h3 class="kto-highlights-item__header">Corda</h3>
+                        <div class="kto-highlights-item__text">Corda is an open-source distributed ledger platform, supported by major banks, and built entirely in Kotlin</div>
+                    </a>
+                    <a class="kto-highlights-item kto-highlights-item_company_evernote" href="https://blog.evernote.com/tech/2017/01/26/android-state-library/" target="_blank">
+                        <h3 class="kto-highlights-item__header">Evernote</h3>
+                        <div class="kto-highlights-item__text">Evernote recently integrated Kotlin into their Android client</div>
+                    </a>
+                    <a class="kto-highlights-item kto-highlights-item_company_coursera" href="https://building.coursera.org/blog/2016/03/16/becoming-bilingual-coursera/" target="_blank">
+                        <h3 class="kto-highlights-item__header">Coursera</h3>
+                        <div class="kto-highlights-item__text">Coursera Android app is partially written in Kotlin</div>
+                    </a>
+                    <a class="kto-highlights-item kto-highlights-item_company_spring" href="https://spring.io/blog/2017/01/04/introducing-kotlin-support-in-spring-framework-5-0" target="_blank">
+                        <h3 class="kto-highlights-item__header">Spring</h3>
+                        <div class="kto-highlights-item__text">Spring makes use of Kotlin's language features to offer more concise APIs</div>
+                    </a>
+                    <a class="kto-highlights-item kto-highlights-item_company_atlassian" href="https://twitter.com/danlew42/status/809065097339564032" target="_blank">
+                        <h3 class="kto-highlights-item__header">Atlassian</h3>
+                        <div class="kto-highlights-item__text">All new code in the Trello Android app is in Kotlin</div>
+                    </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-started" class="kto-overview-section kotlin-get-started-section">
+        <div class="g-layout">
+            <p class="kto-text kto-text_size_s">Want to give it a try?</p>
+            <h2 class="kto-heading kto-heading_size_hero kotlin-get-started-section__title">
+                <a class="kto-anchor-link" href="https://kotlinlang.org/#get-started">
+                    Start using Kotlin today!<br>
+                    Build your first app in your favorite IDE
+                </a>
+            </h2>
+            <a class="kto-button kto-button_size_m kto-button_mode_contrast smooth-anchor" href="https://kotlinlang.org/docs/getting-started.html">Get started</a>
+        </div>
+    </section>
+<!-- ktl_component: {"name": "footer", "props": {}} --><div><footer class="ktl-footer-module_footer_m67Up ktl-footer-module_footer-dark-theme_YUAFI"><div class="ktl-footer-module_social-list-area_bS3eE"><div class="rs-h4 rs-h4_theme_dark ktl-footer-module_social-list-title_HPzIP">Stay in touch:</div><div class="ktl-social-list-module_social-list_K2Nqu"><a target="_blank" class="ktl-social-item-module_social-item_GpKEF ktl-social-item-module_social-item-dark-theme_rOJWT" href="https://github.com/JetBrains/kotlin" title="Kotlin on GitHub"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M17.9 9.2a8.94 8.94 0 0 1-6.4 8.6.392.392 0 0 1-.4-.4v-3a1.58 1.58 0 0 0-.5-1.2 3.734 3.734 0 0 0 3.9-3.4 4.244 4.244 0 0 0-.9-3.5c.29-.79.217-1.669-.2-2.4a7.24 7.24 0 0 0-2.4.9c-1.44-.4-2.96-.4-4.4 0a4.62 4.62 0 0 0-2.3-.9h-.1A2.75 2.75 0 0 0 4 6.3a4.075 4.075 0 0 0-.9 3.5A3.81 3.81 0 0 0 7 13.2c-.198.148-.34.36-.4.6a2.638 2.638 0 0 0-.1.7 1.943 1.943 0 0 1-2.2-.5c-.5-.8-.9-1.2-1.4-1.3-.5-.1-.6.2-.6.2.079.26.26.476.5.6.387.216.674.575.8 1a1.827 1.827 0 0 0 1.2 1.2 3.915 3.915 0 0 0 1.9 0v1.7a.297.297 0 0 1-.4.3A8.82 8.82 0 0 1 0 9.2a8.95 8.95 0 0 1 17.9 0Z" fill="currentColor"></path></svg></a><a target="_blank" class="ktl-social-item-module_social-item_GpKEF ktl-social-item-module_social-item-dark-theme_rOJWT" href="https://twitter.com/kotlin" title="Kotlin on Twitter"><svg width="20" height="17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.29 16.25A11.59 11.59 0 0 0 18 4.58v-.53a8.3 8.3 0 0 0 2-2.13 8.36 8.36 0 0 1-2.36.65A4.16 4.16 0 0 0 19.45.3a8.19 8.19 0 0 1-2.61 1 4.11 4.11 0 0 0-7 3.75A11.7 11.7 0 0 1 1.39.75a4.11 4.11 0 0 0 1.27 5.48A4.06 4.06 0 0 1 .8 5.71a4.11 4.11 0 0 0 3.29 4 4.13 4.13 0 0 1-1.85.07 4.12 4.12 0 0 0 3.83 2.85A8.25 8.25 0 0 1 1 14.47a7.94 7.94 0 0 1-1-.06 11.69 11.69 0 0 0 6.29 1.84Z" fill="currentColor"></path></svg></a><a target="_blank" class="ktl-social-item-module_social-item_GpKEF ktl-social-item-module_social-item-dark-theme_rOJWT" href="https://surveys.jetbrains.com/s3/kotlin-slack-sign-up" title="Kotlin Slack"><svg width="18" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.63 9.49a1.895 1.895 0 0 0-1.89 1.89v4.73a1.89 1.89 0 1 0 3.78 0v-4.73a1.895 1.895 0 0 0-1.89-1.89ZM.01 11.38a1.89 1.89 0 1 0 3.78 0V9.49H1.91a1.897 1.897 0 0 0-1.9 1.89ZM6.63 0a1.89 1.89 0 1 0 0 3.78h1.89v-1.9A1.886 1.886 0 0 0 6.63 0ZM1.89 8.53h4.74a1.89 1.89 0 1 0 0-3.78H1.89a1.89 1.89 0 0 0 0 3.78Zm14.2-3.79a1.895 1.895 0 0 0-1.89 1.89v1.89h1.89a1.89 1.89 0 1 0 0-3.78ZM9.48 1.89v4.74a1.89 1.89 0 1 0 3.78 0V1.89a1.89 1.89 0 1 0-3.78 0Zm3.78 14.22a1.895 1.895 0 0 0-1.89-1.89H9.48v1.89a1.89 1.89 0 1 0 3.78 0Zm2.85-6.62h-4.74a1.89 1.89 0 1 0 0 3.78h4.74a1.89 1.89 0 1 0 0-3.78Z" fill="currentColor"></path></svg></a><a target="_blank" class="ktl-social-item-module_social-item_GpKEF ktl-social-item-module_social-item-dark-theme_rOJWT" href="https://www.reddit.com/r/Kotlin/" title="Kotlin on Reddit"><svg width="20" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 9.068a2.183 2.183 0 0 0-2.186-2.186 2.2 2.2 0 0 0-1.524.61c-1.505-1.076-3.566-1.775-5.86-1.865L11.434.932l3.261.699a1.559 1.559 0 0 0 3.119-.072A1.56 1.56 0 0 0 16.254 0c-.609 0-1.147.358-1.397.878l-3.638-.77a.381.381 0 0 0-.287.053.347.347 0 0 0-.161.251L9.659 5.645c-2.33.072-4.426.77-5.95 1.864a2.2 2.2 0 0 0-1.523-.61 2.183 2.183 0 0 0-.896 4.176c-.036.22-.054.441-.053.664 0 3.368 3.924 6.11 8.763 6.11s8.764-2.723 8.764-6.11c0-.223-.018-.444-.054-.664A2.208 2.208 0 0 0 20 9.069Zm-15.018 1.56a1.56 1.56 0 0 1 3.118 0c0 .86-.698 1.559-1.559 1.559-.86.017-1.559-.7-1.559-1.56Zm8.728 4.139c-1.076 1.075-3.119 1.147-3.71 1.147-.61 0-2.652-.09-3.71-1.147a.4.4 0 0 1 0-.573.4.4 0 0 1 .574 0c.68.68 2.115.913 3.136.913 1.022 0 2.473-.232 3.136-.913a.401.401 0 0 1 .574 0 .436.436 0 0 1 0 .573Zm-.287-2.563a1.56 1.56 0 0 1 0-3.118c.86 0 1.56.699 1.56 1.56 0 .841-.7 1.558-1.56 1.558Z" fill="currentColor"></path></svg></a><a target="_blank" class="ktl-social-item-module_social-item_GpKEF ktl-social-item-module_social-item-dark-theme_rOJWT" href="https://stackoverflow.com/questions/tagged/kotlin" title="Kotlin on Stack Overflow"><svg width="16" height="19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M13.527 17.27V12.19h1.685v6.764H0v-6.763h1.685v5.078h11.842Z" fill="currentColor"></path><path d="m3.546 11.71 8.274 1.73.35-1.664-8.274-1.73-.35 1.664ZM4.64 7.77l7.661 3.568.7-1.532-7.66-3.59-.7 1.554Zm2.123-3.765 6.501 5.407 1.073-1.292-6.501-5.406-1.073 1.291ZM10.966 0 9.609 1.007l5.034 6.785L16 6.785 10.966 0ZM3.37 15.562h8.448v-1.685H3.371v1.685Z" fill="currentColor"></path></svg></a><a target="_blank" class="ktl-social-item-module_social-item_GpKEF ktl-social-item-module_social-item-dark-theme_rOJWT" href="https://www.youtube.com/channel/UCP7uiEZIqci43m22KDl0sNw" title="Kotlin on YouTube"><svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21.005 5.617c.43.633.702 1.36.795 2.119.124 1.146.191 2.299.2 3.452v1.618a34.375 34.375 0 0 1-.2 3.454 4.808 4.808 0 0 1-.795 2.116 2.772 2.772 0 0 1-2.003.904c-2.8.215-7.002.222-7.002.222s-5.2-.05-6.8-.214a3.27 3.27 0 0 1-2.205-.912 4.8 4.8 0 0 1-.795-2.117 34.354 34.354 0 0 1-.2-3.453v-1.618c.009-1.154.075-2.306.2-3.452.093-.76.365-1.486.795-2.12a2.76 2.76 0 0 1 2.003-.901c2.799-.217 6.997-.217 6.997-.217h.01s4.198 0 6.997.217a2.76 2.76 0 0 1 2.003.902ZM15.755 12 9.501 8.249v7.502L15.754 12Z" fill="currentColor"></path></svg></a></div></div><nav class="ktl-footer-module_nav-list-area_7JJh0"><ul class="ktl-nav-list-module_nav-list_-k4np"><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a href="https://kotlinlang.org/docs/contribute.html" title="Contributing to Kotlin" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Contributing to Kotlin</a></li><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a href="https://kotlinlang.org/docs/releases.html" title="Releases" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Releases</a></li><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a href="https://kotlinlang.org/assets/kotlin-media-kit.pdf" title="Press Kit" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Press Kit</a></li><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a href="https://kotlinlang.org/docs/security.html" title="Security" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Security</a></li><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a target="_blank" href="https://blog.jetbrains.com/kotlin/" title="Blog" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Blog</a></li><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a target="_blank" href="https://youtrack.jetbrains.com/issues/KT" title="Issue Tracker" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Issue Tracker</a></li><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a target="_blank" href="https://resources.jetbrains.com/storage/products/kotlin/docs/kotlin_logos.zip" title="Brand assets" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Brand assets</a></li><li class="ktl-nav-item-module_nav-item_isoyN rs-text-2 rs-text-2_theme_dark ktl-nav-item-module_nav-item-dark-theme_FijdH"><a target="_blank" href="https://www.jetbrains.com/careers/jobs/?team=Kotlin" title="Careers" class="rs-link rs-link_hardness_average rs-link_mode_clear rs-link_theme_dark">Careers</a></li></ul></nav><div class="rs-text-3 rs-text-3_hardness_pale rs-text-3_theme_dark ktl-footer-module_text-area_flccc"><div class="ktl-footer-module_copyright_XjtgY">Kotlin™ is&nbsp;protected under the <a class="rs-link rs-link_hardness_pale rs-link_mode_clear rs-link_theme_dark ktl-footer-module_underlined-link_G0wkq" href="https://kotlinlang.org/foundation/kotlin-foundation.html">Kotlin&nbsp;Foundation</a> and licensed under the <a class="rs-link rs-link_hardness_pale rs-link_mode_clear rs-link_theme_dark ktl-footer-module_underlined-link_G0wkq" target="_blank" href="https://github.com/JetBrains/kotlin-web-site/blob/master/LICENSE">Apache 2&nbsp;license</a>.</div> <div class="ktl-footer-module_motto_SiU1V">Supported and developed by&nbsp;<a class="rs-link rs-link_hardness_pale rs-link_mode_clear rs-link_theme_dark ktl-footer-module_underlined-link_G0wkq" href="https://www.jetbrains.com/" target="_blank">JetBrains</a></div></div><a href="https://jetbrains.com/" target="_blank" class="ktl-footer-module_logo-area_SsNTa ktl-logo-module_link_bNecp"><svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M60 0H0v60h60V0Z" fill="#000"></path><path d="M27.648 48.706H5.178v3.765h22.47v-3.765ZM4.941 15.765l1.765-1.647c.47.588.941.941 1.53.941.705 0 1.058-.47 1.058-1.412V7.412H12v6.235c0 1.177-.353 2.118-.94 2.706-.59.588-1.53.941-2.707.941-1.765.118-2.706-.588-3.412-1.529ZM12.586 7.53h7.883v2.235h-5.177v1.529h4.706v2.118h-4.706v1.53h5.294v2.352h-7.882l-.118-9.765ZM24 9.882h-2.941V7.53h8.588v2.353h-2.941v7.412H24V9.882ZM5.177 19.53h5.06c1.175 0 2.117.352 2.705.823.353.353.588.941.588 1.647 0 1.177-.588 1.765-1.53 2.235 1.177.353 1.883 1.06 1.883 2.353 0 1.647-1.412 2.706-3.647 2.706H5.177V19.53Zm5.647 3.058c0-.588-.47-.823-1.176-.823H7.883v1.764H9.53c.824-.117 1.294-.352 1.294-.94Zm-.94 2.824H7.764v1.765h2.118c.824 0 1.294-.353 1.294-.942 0-.588-.47-.823-1.294-.823ZM14.352 19.53h4.588c1.53 0 2.471.352 3.177 1.058.588.589.823 1.294.823 2.236 0 1.53-.823 2.47-2 3.058l2.353 3.412h-3.058l-2-2.94h-1.177v2.94h-2.706V19.53Zm4.47 4.705c.942 0 1.413-.47 1.413-1.176 0-.824-.589-1.177-1.412-1.177h-1.765v2.353h1.765Z" fill="#fff"></path><path d="M26.119 19.53h2.588l4.117 9.882h-2.94l-.707-1.765h-3.764l-.706 1.765h-2.824l4.236-9.883Zm2.352 5.882-1.058-2.706-1.06 2.706h2.118ZM33.177 19.53h2.706v9.764h-2.706V19.53ZM36.588 19.53h2.471l4 5.176v-5.177h2.706v9.765h-2.353L39.294 24v5.412h-2.706v-9.883ZM46 27.883l1.529-1.765c.941.824 2 1.177 3.176 1.177.706 0 1.177-.236 1.177-.706s-.353-.588-1.647-.941c-2.118-.47-3.647-1.06-3.647-3.06 0-1.764 1.411-3.176 3.764-3.176 1.648 0 2.942.47 4 1.294l-1.411 1.883c-.942-.588-1.883-.941-2.706-.941-.706 0-.941.235-.941.588 0 .47.353.588 1.647.941 2.235.47 3.647 1.177 3.647 3.059 0 2-1.53 3.176-4 3.176-1.765.118-3.412-.47-4.589-1.53Z" fill="#fff"></path></svg></a></footer></div>
+</div>
+
+<script>document.body.className = document.body.className.replace('page_js_no', 'page_js_yes')</script><script type="text/javascript" id="">var separator="|",firstCookieName="first_utm_parameters",lastCookieName="last_utm_parameters",cookieValue="",undefinedCookieValue=("undefined"+separator).repeat(2)+"undefined",undefinedCookieValueExtended=("undefined"+separator).repeat(5)+"undefined";function getCookie(a){return(a=document.cookie.match(new RegExp("(?:^|; )"+a.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g,"\\$1")+"\x3d([^;]*)")))?a[1]:void 0}
+function setCookie(a,b){var d=31104E6,c=new Date,e=c.getTime();c.setTime(e+d);c=c.toUTCString();document.cookie=a+"\x3d"+b+"; SameSite\x3dNone; Secure; expires\x3d"+c+"; path\x3d/; domain\x3d."+location.hostname.replace(/^www\./i,"")}function getQueryParam(a){var b=window.location.search.replaceAll("+","%2b");b=new URLSearchParams(b);return(a=b.get(a))?a.replaceAll("%2b","+"):void 0}
+cookieValue=getQueryParam("utm_source")||getQueryParam("utm_medium")||getQueryParam("utm_campaign")?getQueryParam("utm_source")+separator+getQueryParam("utm_medium")+separator+getQueryParam("utm_campaign"):getQueryParam("source")+separator+getQueryParam("medium")+separator+getQueryParam("campaign");cookieValue=getQueryParam("utm_term")?cookieValue+separator+getQueryParam("utm_term"):getQueryParam("keyword")?cookieValue+separator+getQueryParam("keyword"):cookieValue+separator+getQueryParam("term");
+cookieValue=getQueryParam("utm_content")?cookieValue+separator+getQueryParam("utm_content"):cookieValue+separator+getQueryParam("content");cookieValue=getQueryParam("gclid")?cookieValue+separator+getQueryParam("gclid"):cookieValue+separator+getQueryParam("msclkid");cookieValue=cookieValue.replace(/\s|,|;/g,"_");cookieValue=cookieValue.substring(0,2E3);
+if(cookieValue!==undefinedCookieValueExtended){var first_cookie_value=getCookie(firstCookieName);first_cookie_value&&first_cookie_value!==undefinedCookieValue&&first_cookie_value!==undefinedCookieValueExtended||setCookie(firstCookieName,cookieValue);setCookie(lastCookieName,cookieValue)};</script>
+<script src="../../../../../Kotlin%20Programming%20Language_files/shared.js"></script>
+<script src="../../../../../Kotlin%20Programming%20Language_files/common.js"></script>
+    <script src="../../../../../Kotlin%20Programming%20Language_files/index.js"></script>
+
+<img src="../../../../../Kotlin%20Programming%20Language_files/adsct" height="1" width="1" style="display: none;"><img src="../../../../../Kotlin%20Programming%20Language_files/adsct(1)" height="1" width="1" style="display: none;"><script type="text/javascript" id="">(function(){function b(){!1===c&&(c=!0,Munchkin.init("426-QVD-114",{clickTime:250}))}var c=!1,a=document.createElement("script");a.type="text/javascript";a.async=!0;a.src="//munchkin.marketo.net/munchkin.js";a.onreadystatechange=function(){"complete"!=this.readyState&&"loaded"!=this.readyState||b()};a.onload=b;document.getElementsByTagName("head")[0].appendChild(a)})();</script><div style="display: none; visibility: hidden;">
+<script>!function(b,e,f,g,a,c,d){b.fbq||(a=b.fbq=function(){a.callMethod?a.callMethod.apply(a,arguments):a.queue.push(arguments)},b._fbq||(b._fbq=a),a.push=a,a.loaded=!0,a.version="2.0",a.queue=[],c=e.createElement(f),c.async=!0,c.src=g,d=e.getElementsByTagName(f)[0],d.parentNode.insertBefore(c,d))}(window,document,"script","https://connect.facebook.net/en_US/fbevents.js");fbq("dataProcessingOptions",["LDU"],0,0);fbq("init","614099138684330");fbq("track","PageView");</script>
+<noscript></noscript>
+</div></body></html>
